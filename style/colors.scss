@@ -1,0 +1,8 @@
+$primary-color: #0D0D2B;
+$secondary-color: #2B076E;
+$accent-color: #3671E9;
+$transparent-white: rgba(256, 256, 256, 0.1);
+$font-color: #C8C8C8; 
+$gray-gradient: linear-gradient(to bottom, #F8F9FB, #FAFBFF);
+$gray-gradient-top: linear-gradient(to top, #F8F9FB, #FAFBFF);
+$dark-gradient: linear-gradient(to top, $primary-color, $secondary-color);

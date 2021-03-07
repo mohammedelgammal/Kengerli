@@ -1,0 +1,102 @@
+@import 'colors';
+@import 'mixins';
+
+.start-mining {
+    background: $dark-gradient;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 50px 150px 50px;
+    grid-template-areas: 
+        ". . ."
+        ". card ."
+        ". . .";
+        
+        &__card {
+            position: relative;
+            grid-area: card;
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: 20px 1fr 1fr 20px;
+            grid-template-rows: 20px 1fr 20px;
+            grid-template-areas: 
+                ". . . ."
+                ". content subscribe ."
+                ". . . .";
+            background: $accent-color;
+
+                img {
+                    position: absolute;
+                    bottom: 0px;
+                    right: 0px;
+                    width: 100px;
+                    height: 100px;
+                }
+
+                &__content {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr 1fr;
+                    grid-area: content;
+                    background: $accent-color;
+                    
+                        h3 {
+                            color: white;
+                            font-family: sans-serif;
+                            font-size: 1.5rem;
+                        }
+                        
+                        p {
+                            font-size: calc(0.45vw + 0.5rem);
+                            line-height: 180%;
+                            color: $font-color;
+                            font-weight: bold;
+                        }
+                }
+                &__subscribe {
+                    grid-area: subscribe;
+                    display: grid;
+                    grid-template-columns: 3fr 20px 1fr;
+                    grid-template-rows: 1fr;
+                    grid-template-areas: 
+                        "input . button";
+                    background-color: $accent-color;
+
+                        input {
+                            background-color: $accent-color;
+                            align-self: center; 
+                            border: none;
+                            outline: none;
+                            grid-area: input;
+                            font-size: calc(0.5vw + 0.6rem);
+                            font-weight: bold;
+                            color: white;
+                            border-bottom: 1px solid $font-color;
+                            height: 35px;
+                            letter-spacing: 2px;
+                        }
+
+                        input::placeholder {
+                            font-size: calc(0.5vw + 0.5rem);
+                            font-weight: bold;
+                            color: $font-color;
+                            letter-spacing: 1px;
+                        }
+
+                        button {
+                            grid-area: button;
+                            align-self: center;
+                            @include centering();
+                            height: 40px;
+                            border-radius: 100px;
+                            background-color: white;
+                            border: none;
+                            outline: none;
+                            cursor: pointer;
+                            color: $primary-color;
+                            font-weight: bold;
+                            letter-spacing: 1px;
+                            z-index: 3;
+                        }
+                }
+        }
+}

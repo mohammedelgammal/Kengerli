@@ -1,0 +1,361 @@
+.features {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 200px 1fr;
+      grid-template-rows: 200px 1fr;
+  background-color: gray;
+}
+
+.features__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #2B076E;
+}
+
+.features__heading h2 {
+  color: white;
+  font-family: sans-serif;
+  font-size: 2rem;
+  line-height: 150%;
+  text-align: center;
+}
+
+.features__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+}
+
+.features__content__invest-smart {
+  background-color: #2B076E;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr 1fr 50px;
+      grid-template-columns: 50px 1fr 1fr 50px;
+  -ms-grid-rows: 50px 1fr 50px;
+      grid-template-rows: 50px 1fr 50px;
+      grid-template-areas: ". . . ." ". content illustration ." ". . . .";
+}
+
+.features__content__invest-smart__content-card {
+  display: -ms-grid;
+  display: grid;
+      grid-template-columns: 50px auto 50px;
+      grid-template-rows: 100px 20px 130px 50px 100px;
+      grid-template-areas: ". . ." ". heading ." ". paragraph ." ". button ." ". . .";
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: content;
+  background-color: #2B076E;
+}
+
+.features__content__invest-smart__content-card h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: calc(1.5vw + 0.5rem);
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: heading;
+  color: white;
+  font-weight: bolder;
+}
+
+.features__content__invest-smart__content-card p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: paragraph;
+  font-size: calc(0.5vw + 0.5rem);
+  line-height: 180%;
+}
+
+.features__content__invest-smart__content-card button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: button;
+  width: 130px;
+  height: 45px;
+  border-radius: 100px;
+  background-color: #3671E9;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.features__content__invest-smart__illustration-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: illustration;
+  background-color: #2B076E;
+}
+
+.features__content__invest-smart__illustration-card img {
+  width: calc(580px * 0.8);
+}
+
+.features__content__statistics {
+  background-color: #2B076E;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr 1fr 50px;
+      grid-template-columns: 50px 1fr 1fr 50px;
+  -ms-grid-rows: 50px 1fr 50px;
+      grid-template-rows: 50px 1fr 50px;
+      grid-template-areas: ". . . ." ". content illustration ." ". . . .";
+      grid-template-areas: ". . . ." ". illustration content ." ". . . .";
+}
+
+.features__content__statistics__content-card {
+  display: -ms-grid;
+  display: grid;
+      grid-template-columns: 50px auto 50px;
+      grid-template-rows: 100px 20px 130px 50px 100px;
+      grid-template-areas: ". . ." ". heading ." ". paragraph ." ". button ." ". . .";
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: content;
+  background-color: #2B076E;
+}
+
+.features__content__statistics__content-card h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: calc(1.5vw + 0.5rem);
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: heading;
+  color: white;
+  font-weight: bolder;
+}
+
+.features__content__statistics__content-card p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: paragraph;
+  font-size: calc(0.5vw + 0.5rem);
+  line-height: 180%;
+}
+
+.features__content__statistics__content-card button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: button;
+  width: 130px;
+  height: 45px;
+  border-radius: 100px;
+  background-color: #3671E9;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.features__content__statistics__illustration-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: illustration;
+  background-color: #2B076E;
+}
+
+.features__content__statistics__illustration-card img {
+  width: calc(580px * 0.8);
+}
+
+.features__content__grow-profit {
+  background-color: #2B076E;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr 1fr 50px;
+      grid-template-columns: 50px 1fr 1fr 50px;
+  -ms-grid-rows: 50px 1fr 50px;
+      grid-template-rows: 50px 1fr 50px;
+      grid-template-areas: ". . . ." ". content illustration ." ". . . .";
+}
+
+.features__content__grow-profit__content-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px auto 50px;
+      grid-template-columns: 50px auto 50px;
+  -ms-grid-rows: 100px 20px 130px 50px 100px;
+      grid-template-rows: 100px 20px 130px 50px 100px;
+      grid-template-areas: ". . ." ". heading ." ". paragraph ." ". button ." ". . .";
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: content;
+  background-color: #2B076E;
+}
+
+.features__content__grow-profit__content-card h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: calc(1.5vw + 0.5rem);
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: heading;
+  color: white;
+  font-weight: bolder;
+}
+
+.features__content__grow-profit__content-card p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: paragraph;
+  font-size: calc(0.5vw + 0.5rem);
+  line-height: 180%;
+}
+
+.features__content__grow-profit__content-card button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: button;
+  width: 130px;
+  height: 45px;
+  border-radius: 100px;
+  background-color: #3671E9;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.features__content__grow-profit__illustration-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: illustration;
+  background-color: #2B076E;
+}
+
+.features__content__grow-profit__illustration-card img {
+  width: calc(580px * 0.8);
+}
+/*# sourceMappingURL=features.css.map */

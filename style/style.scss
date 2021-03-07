@@ -1,84 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@import 'colors';
+@import 'mixins';
+@import 'header';
+@import 'main';
+@import 'whycrappo';
+@import 'tradesecurely';
+@import 'features';
+@import 'startmining';
+@import 'footer';
+
 * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box; 
+    color: $font-color;
+    font-family: 'Rubik', sans-serif;
 }
 
 body {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 90px 800px auto auto auto auto auto;
+    grid-template-rows: 80px 600px 620px auto auto auto auto;
+    overflow-x: hidden;
 }
 
-//colors
-$primary-color: #0D0D2B;
-$secondary-color: #2B076E;
-$accent-color: #3671E9;
-
-@mixin centering(){
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.header {
-    background-color: $primary-color;
-    display: grid;
-    grid-template-columns: 50px 1fr 1.5fr 50px;
-    grid-template-rows: 20px 50px 20px;
-    grid-template-areas: 
-        ". . . ."
-        ". logo nav ."
-        ". . . .";
-        
-        &__logo {
-            grid-area: logo;
-            display: grid;
-            grid-template-columns: 1fr 1fr; 
-            grid-template-rows: 1fr;
-            background-color: $primary-color;
-        }
-        &__nav {
-            grid-area: nav;
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            grid-template-rows: 100%;
-            background-color: red;
-            
-                &__menu {
-                    background-color: yellow;
-                        ul {
-                            @include centering();
-                            width: 100%;
-                            height: 100%;
-
-                                li {
-                                    list-style-type: none;
-                                    flex: 1;
-                                    text-align: center;
-                                }
-                        }
-                }
-                &__sign-in {
-                    background-color: indianred;
-                }
-        }
-}
-.main {
-    background-color: yellow;
-}
-.why-crappo {
-    background-color: green;
-}
-.trade-securely {
-    background-color: red;
-}
-.features {
-    background-color: orangered;
-}
-.start-mining {
-    background-color: indianred;
-}
-.footer {
-    background-color: burlywood;
-}

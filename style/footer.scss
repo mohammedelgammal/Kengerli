@@ -1,0 +1,158 @@
+@import 'colors';
+@import 'mixins';
+
+.footer {
+    background-color: $primary-color;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 50px 1fr 150px 50px;
+    grid-template-areas: 
+        ". . ."
+        ". navigation ."
+        ". bar ."
+        ". . .";
+
+        &__navigation {
+            background-color: $primary-color;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1.5fr 2fr;
+            grid-template-rows: 1fr;
+            grid-area: navigation;
+
+                &__logo {
+                    img{ 
+                        width: calc(135px * 0.8);
+                        height: calc(40px * 0.8);
+                    }
+                }
+                &__quick-links {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 50px 1fr;
+
+                        h4 {
+                            @include centering();
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            font-size: calc(0.8vw + 0.5rem);
+                            color: white;
+                        }
+
+                        ul {
+                            list-style: none;
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            grid-template-rows: repeat(5, 30px);
+
+                                li {
+                                    font-size: calc(0.5vw + 0.5rem);
+                                    font-weight: bold;
+                                    color: $font-color;
+                                    cursor: pointer;
+                                }
+                                li:hover {
+                                    color: white;
+                                }
+                        }
+                }
+                &__Resources {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 50px 1fr;
+
+                        h4 {
+                            @include centering();
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            font-size: calc(0.8vw + 0.5rem);
+                            color: white;
+                        }
+
+                        ul {
+                            list-style: none;
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            grid-template-rows: repeat(5, 30px);
+
+                                li {
+                                    font-size: calc(0.5vw + 0.5rem);
+                                    font-weight: bold;
+                                    color: $font-color;
+                                    cursor: pointer;
+                                }
+                                li:hover {
+                                    color: white;
+                                }
+                        }
+                }
+                &__payment {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 50px 1fr;
+
+                    &__heading {
+                        h4 {
+                            @include centering();
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            font-size: calc(1.5vw + 0.5rem);
+                            color: white;
+                            letter-spacing: 1px;
+                            line-height: 150%;
+                        }
+                    }
+                    &__methods {
+                        display: grid;
+                        grid-template-columns: 1fr 20px 1fr 20px 1fr;
+                        grid-template-rows: 50px 1fr 50px;
+                        grid-template-areas: 
+                            ". . . . ."
+                            "visa . mastercard . bitcoin"
+                            ". . . . .";
+                    }
+                        
+                    &__visa {
+                        grid-area: visa;
+                        cursor: pointer;
+                    }
+                    &__master-card {
+                        grid-area: mastercard;
+                        cursor: pointer;
+                    }
+                    &__bitcoin {
+                        grid-area: bitcoin;
+                        cursor: pointer;
+                    }     
+                }
+        }
+
+        &__bottom-bar {
+            background-color: $primary-color;
+            grid-area: bar;
+            display: grid;
+            grid-template-columns: 4fr 1fr;
+            grid-template-rows: 1fr;
+
+                &__copy {
+                    align-self: flex-end;
+                    
+                        span {
+                            font-size: calc(0.5vw + 0.5rem);
+                            font-weight: bold;
+                            color: $font-color;
+                            letter-spacing: 1px;
+                        }
+                }
+                &__social {
+                    display: grid;
+                    align-self: flex-end;
+                    grid-template-columns: repeat(5, 1fr);
+
+                        img {
+                            width: 20px;
+                            height: 20px;
+                            cursor: pointer;
+                        }
+                }
+        }
+}

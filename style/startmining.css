@@ -1,0 +1,149 @@
+.start-mining {
+  background: -webkit-gradient(linear, left bottom, left top, from(#0D0D2B), to(#2B076E));
+  background: linear-gradient(to top, #0D0D2B, #2B076E);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr 50px;
+      grid-template-columns: 50px 1fr 50px;
+  -ms-grid-rows: 50px 150px 50px;
+      grid-template-rows: 50px 150px 50px;
+      grid-template-areas: ". . ." ". card ." ". . .";
+}
+
+.start-mining__card {
+  position: relative;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: card;
+  border-radius: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20px 1fr 1fr 20px;
+      grid-template-columns: 20px 1fr 1fr 20px;
+  -ms-grid-rows: 20px 1fr 20px;
+      grid-template-rows: 20px 1fr 20px;
+      grid-template-areas: ". . . ." ". content subscribe ." ". . . .";
+  background: #3671E9;
+}
+
+.start-mining__card img {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 100px;
+  height: 100px;
+}
+
+.start-mining__card__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: content;
+  background: #3671E9;
+}
+
+.start-mining__card__content h3 {
+  color: white;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+}
+
+.start-mining__card__content p {
+  font-size: calc(0.45vw + 0.5rem);
+  line-height: 180%;
+  color: #C8C8C8;
+  font-weight: bold;
+}
+
+.start-mining__card__subscribe {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: subscribe;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 20px 1fr;
+      grid-template-columns: 3fr 20px 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "input . button";
+  background-color: #3671E9;
+}
+
+.start-mining__card__subscribe input {
+  background-color: #3671E9;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border: none;
+  outline: none;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: input;
+  font-size: calc(0.5vw + 0.6rem);
+  font-weight: bold;
+  color: white;
+  border-bottom: 1px solid #C8C8C8;
+  height: 35px;
+  letter-spacing: 2px;
+}
+
+.start-mining__card__subscribe input::-webkit-input-placeholder {
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+  color: #C8C8C8;
+  letter-spacing: 1px;
+}
+
+.start-mining__card__subscribe input:-ms-input-placeholder {
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+  color: #C8C8C8;
+  letter-spacing: 1px;
+}
+
+.start-mining__card__subscribe input::-ms-input-placeholder {
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+  color: #C8C8C8;
+  letter-spacing: 1px;
+}
+
+.start-mining__card__subscribe input::placeholder {
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+  color: #C8C8C8;
+  letter-spacing: 1px;
+}
+
+.start-mining__card__subscribe button {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: button;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  border-radius: 100px;
+  background-color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #0D0D2B;
+  font-weight: bold;
+  letter-spacing: 1px;
+  z-index: 3;
+}
+/*# sourceMappingURL=startmining.css.map */

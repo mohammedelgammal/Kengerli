@@ -1,0 +1,784 @@
+.trade-securely {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 300px 800px;
+      grid-template-rows: 300px 800px;
+}
+
+.trade-securely__earnings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background: #0D0D2B;
+}
+
+.trade-securely__earnings__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.trade-securely__earnings__card h2 {
+  color: white;
+  font-family: sans-serif;
+  font-size: 2rem;
+}
+
+.trade-securely__earnings__card p {
+  font-size: calc(0.45vw + 0.5rem);
+  line-height: 180%;
+  color: #C8C8C8;
+  margin: 20px 0px;
+}
+
+.trade-securely__revenue-calculator {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr auto;
+      grid-template-columns: auto 1fr auto;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+      grid-template-areas: ". card .";
+  position: absolute;
+  height: 300px;
+  width: 100vw;
+  top: 170px;
+  background-color: linear-gradient(to bottom, #F8F9FB, #FAFBFF);
+}
+
+.trade-securely__revenue-calculator__card {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20px 1fr 20px;
+      grid-template-columns: 20px 1fr 20px;
+  -ms-grid-rows: 20px 100px 1fr 20px;
+      grid-template-rows: 20px 100px 1fr 20px;
+      grid-template-areas: ". . ." ". input ." ". estimation ." ". . .";
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: card;
+  background-color: white;
+  opacity: 0.98;
+  height: 100%;
+  width: 700px;
+  border-radius: 10px;
+}
+
+.trade-securely__revenue-calculator__card__input {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: input;
+      align-self: center;
+  background: white;
+  display: -ms-grid;
+  display: grid;
+      grid-template-columns: 2fr 20px 1fr 20px 1fr;
+      grid-template-rows: 50px;
+      grid-template-areas: "input . select . button";
+}
+
+.trade-securely__revenue-calculator__card__input input {
+  position: relative;
+  background-color: white;
+  border: none;
+  outline: none;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: input;
+  font-size: calc(0.5vw + 0.6rem);
+  font-weight: bold;
+  color: gray;
+  border-bottom: 1px solid #C8C8C8;
+  height: 35px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  letter-spacing: 2px;
+}
+
+.trade-securely__revenue-calculator__card__input input::-webkit-input-placeholder {
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+  color: gray;
+  letter-spacing: 1px;
+}
+
+.trade-securely__revenue-calculator__card__input input:-ms-input-placeholder {
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+  color: gray;
+  letter-spacing: 1px;
+}
+
+.trade-securely__revenue-calculator__card__input input::-ms-input-placeholder {
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+  color: gray;
+  letter-spacing: 1px;
+}
+
+.trade-securely__revenue-calculator__card__input input::placeholder {
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+  color: gray;
+  letter-spacing: 1px;
+}
+
+.trade-securely__revenue-calculator__card__input select {
+  background-color: white;
+  border: none;
+  outline: none;
+  font-size: calc(0.5vw + 0.6rem);
+  font-weight: bold;
+  color: gray;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: select;
+  border-bottom: 1px solid #C8C8C8;
+  height: 35px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.trade-securely__revenue-calculator__card__input button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100px;
+  background-color: #3671E9;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: button;
+}
+
+.trade-securely__revenue-calculator__card__estimation {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: estimation;
+  background: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 1fr 30px 60px 20px 1fr;
+      grid-template-rows: 1fr 30px 60px 20px 1fr;
+      grid-template-areas: "." "title" "result" "note" ".";
+}
+
+.trade-securely__revenue-calculator__card__estimation__title {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: title;
+  background-color: white;
+  color: #3671E9;
+  font-weight: bold;
+  font-size: calc(0.4vw + 0.5rem);
+  letter-spacing: 1px;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.trade-securely__revenue-calculator__card__estimation__result {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: result;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: white;
+  -webkit-text-stroke: 1px;
+  letter-spacing: 1px;
+}
+
+.trade-securely__revenue-calculator__card__estimation__result .eth, .trade-securely__revenue-calculator__card__estimation__result .dollar {
+  color: #0D0D2B;
+  font-weight: bolder;
+  font-size: calc(2vw + 0.5rem);
+}
+
+.trade-securely__revenue-calculator__card__estimation__result .dollar {
+  color: #3671E9;
+  margin-right: 20px;
+}
+
+.trade-securely__revenue-calculator__card__estimation__note {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: note;
+  color: #C8C8C8;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: calc(0.4vw + 0.5rem);
+  letter-spacing: 1px;
+}
+
+.trade-securely__crypto-currencies {
+  background: -webkit-gradient(linear, left top, left bottom, from(#F8F9FB), to(#FAFBFF));
+  background: linear-gradient(to bottom, #F8F9FB, #FAFBFF);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr 50px;
+      grid-template-columns: 50px 1fr 50px;
+  -ms-grid-rows: 250px 80px 1fr 50px;
+      grid-template-rows: 250px 80px 1fr 50px;
+      grid-template-areas: ". . ." ". title ." ". cards ." ". . .";
+}
+
+.trade-securely__crypto-currencies__title {
+  background-color: linear-gradient(to top, #F8F9FB, #FAFBFF);
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: title;
+}
+
+.trade-securely__crypto-currencies__title h2 {
+  color: #0D0D2B;
+  font-family: sans-serif;
+  font-size: 2rem;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.trade-securely__crypto-currencies__cards {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: cards;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20px 1fr 20px 1fr 20px 1fr 20px;
+      grid-template-columns: 20px 1fr 20px 1fr 20px 1fr 20px;
+  -ms-grid-rows: 50px 1fr 20px;
+      grid-template-rows: 50px 1fr 20px;
+      grid-template-areas: ". . . . . . ." ". one . two . three ." ". . . . . . .";
+}
+
+.trade-securely__crypto-currencies__cards__card--one, .trade-securely__crypto-currencies__cards__card--two, .trade-securely__crypto-currencies__cards__card--three {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20px 1fr 20px;
+      grid-template-columns: 20px 1fr 20px;
+  -ms-grid-rows: 50px 2fr 1fr 2fr 50px 50px;
+      grid-template-rows: 50px 2fr 1fr 2fr 50px 50px;
+}
+
+.trade-securely__crypto-currencies__cards__card--one {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: one;
+  background-color: #2B076E;
+  border-radius: 10px;
+      grid-template-areas: ". . ." ". logo ." ". name ." ". description ." ". button ." ". . .";
+}
+
+.trade-securely__crypto-currencies__cards__card--one__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: logo;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.trade-securely__crypto-currencies__cards__card--one__logo img {
+  width: 60px;
+  height: 60px;
+}
+
+.trade-securely__crypto-currencies__cards__card--one__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: name;
+}
+
+.trade-securely__crypto-currencies__cards__card--one__name--primary {
+  font-size: calc(1.5vw + 0.5rem);
+  font-family: sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
+.trade-securely__crypto-currencies__cards__card--one__name--secondary {
+  font-size: calc(0.5vw + 0.5rem);
+  color: #C8C8C8;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.trade-securely__crypto-currencies__cards__card--one__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: description;
+}
+
+.trade-securely__crypto-currencies__cards__card--one__description span {
+  font-size: calc(0.45vw + 0.5rem);
+  line-height: 180%;
+  color: #C8C8C8;
+  text-align: center;
+  font-weight: bold;
+}
+
+.trade-securely__crypto-currencies__cards__card--one__button {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: button;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-self: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  width: 150px;
+  height: 50px;
+  border-radius: 100px;
+  background-color: #3671E9;
+  cursor: pointer;
+}
+
+.trade-securely__crypto-currencies__cards__card--one__button__circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.trade-securely__crypto-currencies__cards__card--one__button span {
+  position: absolute;
+  left: 20px;
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+}
+
+.trade-securely__crypto-currencies__cards__card--two {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: two;
+  background-color: #2B076E;
+  border-radius: 10px;
+      grid-template-areas: ". . ." ". logo ." ". name ." ". description ." ". button ." ". . .";
+  background-color: white;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: logo;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__logo img {
+  width: 60px;
+  height: 60px;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: name;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__name--primary {
+  font-size: calc(1.5vw + 0.5rem);
+  font-family: sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__name--secondary {
+  font-size: calc(0.5vw + 0.5rem);
+  color: #C8C8C8;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: description;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__description span {
+  font-size: calc(0.45vw + 0.5rem);
+  line-height: 180%;
+  color: #C8C8C8;
+  text-align: center;
+  font-weight: bold;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__button {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: button;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-self: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  width: 150px;
+  height: 50px;
+  border-radius: 100px;
+  background-color: #3671E9;
+  cursor: pointer;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__button__circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__button span {
+  position: absolute;
+  left: 20px;
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__name--primary {
+  color: #0D0D2B;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__button--two {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: button;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__button--two__circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #C8C8C8;
+  background-color: white;
+}
+
+.trade-securely__crypto-currencies__cards__card--three {
+  -ms-grid-row: 2;
+  -ms-grid-column: 6;
+  grid-area: three;
+  background-color: #2B076E;
+  border-radius: 10px;
+      grid-template-areas: ". . ." ". logo ." ". name ." ". description ." ". button ." ". . .";
+  background-color: white;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: logo;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__logo img {
+  width: 60px;
+  height: 60px;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: name;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__name--primary {
+  font-size: calc(1.5vw + 0.5rem);
+  font-family: sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__name--secondary {
+  font-size: calc(0.5vw + 0.5rem);
+  color: #C8C8C8;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: description;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__description span {
+  font-size: calc(0.45vw + 0.5rem);
+  line-height: 180%;
+  color: #C8C8C8;
+  text-align: center;
+  font-weight: bold;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__button {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: button;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-self: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  width: 150px;
+  height: 50px;
+  border-radius: 100px;
+  background-color: #3671E9;
+  cursor: pointer;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__button__circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__button span {
+  position: absolute;
+  left: 20px;
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__name--primary {
+  color: #0D0D2B;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__button--three {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: button;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__button--three__circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #C8C8C8;
+  background-color: white;
+}
+/*# sourceMappingURL=tradesecurely.css.map */

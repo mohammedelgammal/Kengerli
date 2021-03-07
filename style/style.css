@@ -1,27 +1,12 @@
-* {
-  padding: 0px;
-  margin: 0px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
-  -ms-grid-rows: 90px 800px auto auto auto auto auto;
-      grid-template-rows: 90px 800px auto auto auto auto auto;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
 .header {
   background-color: #0D0D2B;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50px 1fr 1.5fr 50px;
       grid-template-columns: 50px 1fr 1.5fr 50px;
-  -ms-grid-rows: 20px 50px 20px;
-      grid-template-rows: 20px 50px 20px;
+  -ms-grid-rows: 20px 40px 20px;
+      grid-template-rows: 20px 40px 20px;
       grid-template-areas: ". . . ." ". logo nav ." ". . . .";
 }
 
@@ -31,9 +16,7 @@ body {
   grid-area: logo;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
   background-color: #0D0D2B;
 }
@@ -48,11 +31,11 @@ body {
       grid-template-columns: 1.5fr 1fr;
   -ms-grid-rows: 100%;
       grid-template-rows: 100%;
-  background-color: red;
+  background-color: #0D0D2B;
 }
 
 .header__nav__menu {
-  background-color: yellow;
+  background-color: #0D0D2B;
 }
 
 .header__nav__menu ul {
@@ -70,38 +53,2021 @@ body {
 }
 
 .header__nav__menu ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
   list-style-type: none;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   text-align: center;
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #0D0D2B;
+}
+
+.header__nav__menu ul li:hover {
+  color: white;
 }
 
 .header__nav__sign-in {
-  background-color: indianred;
+  background-color: #0D0D2B;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+}
+
+.header__nav__sign-in button {
+  background-color: #3671E9;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.header__nav__sign-in .login {
+  background-color: #0D0D2B;
+}
+
+.header__nav__sign-in button:hover {
+  color: white;
+}
+
+.header__nav__sign-in .register:hover {
+  background-color: #2B076E;
 }
 
 .main {
-  background-color: yellow;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr 1fr 50px;
+      grid-template-columns: 50px 1fr 1fr 50px;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+      grid-template-areas: ". value illustration .";
+  background-color: #0D0D2B;
+}
+
+.main__value {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: value;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 100px 30px 20px 170px 20px 40px 20px 50px 20px;
+      grid-template-rows: 100px 30px 20px 170px 20px 40px 20px 50px 20px;
+      grid-template-areas: "." "info" "." "heading" "." "paragraph" "." "try" ".";
+  background-color: #0D0D2B;
+}
+
+.main__value__info {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: info;
+}
+
+.main__value__info__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border-radius: 50px;
+  height: 100%;
+  width: 280px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.main__value__info__text * {
+  font-size: calc(0.35vw + 0.5rem);
+  font-weight: bold;
+  color: #C8C8C8;
+}
+
+.main__value__info__text__save {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  color: #0D0D2B;
+  border-radius: 50px;
+  height: 100%;
+  width: 80px;
+}
+
+.main__value__info__text__for {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+}
+
+.main__value__heading {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: heading;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: #0D0D2B;
+}
+
+.main__value__heading h1 {
+  color: white;
+  font-family: sans-serif;
+  font-size: 3rem;
+}
+
+.main__value__paragraph {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: paragraph;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: #0D0D2B;
+}
+
+.main__value__paragraph p {
+  font-size: calc(0.45vw + 0.5rem);
+  line-height: 180%;
+  color: #C8C8C8;
+}
+
+.main__value__try {
+  -ms-grid-row: 8;
+  -ms-grid-column: 1;
+  grid-area: try;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: #0D0D2B;
+}
+
+.main__value__try__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  width: 150px;
+  height: 100%;
+  border-radius: 100px;
+  background-color: #3671E9;
+  cursor: pointer;
+}
+
+.main__value__try__button__circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.main__value__try__button span {
+  position: absolute;
+  left: 20px;
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+}
+
+.main__value__try__button:hover {
+  background-color: #2B076E;
+}
+
+.main__value__try__button:hover div {
+  background-color: #C8C8C8;
+}
+
+.main__illustration {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: illustration;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0D0D2B;
+}
+
+.main__illustration img {
+  width: calc(604px * 0.8);
+  height: calc(586px * 0.8);
 }
 
 .why-crappo {
-  background-color: green;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr 50px;
+      grid-template-columns: 50px 1fr 50px;
+  -ms-grid-rows: 100px 500px;
+      grid-template-rows: 100px 500px;
+      grid-template-areas: ". numbers ." ". content .";
+  z-index: 3;
+  background-color: #0D0D2B;
+}
+
+.why-crappo__numbers {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: numbers;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #0D0D2B;
+}
+
+.why-crappo__numbers__number {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80px auto;
+      grid-template-columns: 80px auto;
+  -ms-grid-rows: 60px 20px;
+      grid-template-rows: 60px 20px;
+      grid-template-areas: "icon num" "icon text";
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.why-crappo__numbers__number__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: icon;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.why-crappo__numbers__number__num {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: num;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20px 1fr;
+      grid-template-columns: 20px 1fr;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+      grid-template-areas: ". text";
+  background-color: #0D0D2B;
+}
+
+.why-crappo__numbers__number__num span {
+  -ms-flex-item-align: center;
+      align-self: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: text;
+  font-size: calc(2vw + 0.5rem);
+  letter-spacing: 2px;
+  color: white;
+  font-weight: bold;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+.why-crappo__numbers__number__text {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: text;
+  display: -ms-grid;
+  display: grid;
+      grid-template-columns: 20px 1fr;
+      grid-template-rows: 100%;
+      grid-template-areas: ". text";
+  background-color: #0D0D2B;
+}
+
+.why-crappo__numbers__number__text span {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: text;
+  font-size: calc(0.4vw + 0.5rem);
+  color: #C8C8C8;
+}
+
+.why-crappo__content {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: content;
+  display: -ms-grid;
+  display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 100%;
+  background-color: #0D0D2B;
+}
+
+.why-crappo__content__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0D0D2B;
+}
+
+.why-crappo__content__image img {
+  width: calc(650px * 0.7);
+  height: calc(473px * 0.7);
+}
+
+.why-crappo__content__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 50px;
+  background-color: #0D0D2B;
+}
+
+.why-crappo__content__text h2 {
+  color: white;
+  font-family: sans-serif;
+  font-size: 2rem;
+}
+
+.why-crappo__content__text p {
+  font-size: calc(0.45vw + 0.5rem);
+  line-height: 180%;
+  color: #C8C8C8;
+  margin: 20px 0px;
+}
+
+.why-crappo__content__text .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+  width: 130px;
+  height: 50px;
+  border-radius: 100px;
+  border: none;
+  outline: none;
+  background-color: #3671E9;
+  cursor: pointer;
+}
+
+.why-crappo__content__text .button:hover {
+  background-color: #2B076E;
+  color: white;
 }
 
 .trade-securely {
-  background-color: red;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 300px 800px;
+      grid-template-rows: 300px 800px;
+}
+
+.trade-securely__earnings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background: #0D0D2B;
+}
+
+.trade-securely__earnings__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.trade-securely__earnings__card h2 {
+  color: white;
+  font-family: sans-serif;
+  font-size: 2rem;
+}
+
+.trade-securely__earnings__card p {
+  font-size: calc(0.45vw + 0.5rem);
+  line-height: 180%;
+  color: #C8C8C8;
+  margin: 20px 0px;
+}
+
+.trade-securely__revenue-calculator {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr auto;
+      grid-template-columns: auto 1fr auto;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+      grid-template-areas: ". card .";
+  position: absolute;
+  height: 300px;
+  width: 100vw;
+  top: 170px;
+  background-color: linear-gradient(to bottom, #F8F9FB, #FAFBFF);
+}
+
+.trade-securely__revenue-calculator__card {
+      justify-self: center;
+  display: -ms-grid;
+  display: grid;
+      grid-template-columns: 20px 1fr 20px;
+      grid-template-rows: 20px 100px 1fr 20px;
+      grid-template-areas: ". . ." ". input ." ". estimation ." ". . .";
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: card;
+  background-color: white;
+  opacity: 0.98;
+  height: 100%;
+  width: 700px;
+  border-radius: 10px;
+}
+
+.trade-securely__revenue-calculator__card__input {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: input;
+      align-self: center;
+  background: white;
+  display: -ms-grid;
+  display: grid;
+      grid-template-columns: 2fr 20px 1fr 20px 1fr;
+      grid-template-rows: 50px;
+      grid-template-areas: "input . select . button";
+}
+
+.trade-securely__revenue-calculator__card__input input {
+  position: relative;
+  background-color: white;
+  border: none;
+  outline: none;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: input;
+  font-size: calc(0.5vw + 0.6rem);
+  font-weight: bold;
+  color: gray;
+  border-bottom: 1px solid #C8C8C8;
+  height: 35px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  letter-spacing: 2px;
+}
+
+.trade-securely__revenue-calculator__card__input input::-webkit-input-placeholder {
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+  color: gray;
+  letter-spacing: 1px;
+}
+
+.trade-securely__revenue-calculator__card__input input:-ms-input-placeholder {
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+  color: gray;
+  letter-spacing: 1px;
+}
+
+.trade-securely__revenue-calculator__card__input input::-ms-input-placeholder {
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+  color: gray;
+  letter-spacing: 1px;
+}
+
+.trade-securely__revenue-calculator__card__input input::placeholder {
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+  color: gray;
+  letter-spacing: 1px;
+}
+
+.trade-securely__revenue-calculator__card__input select {
+  background-color: white;
+  border: none;
+  outline: none;
+  font-size: calc(0.5vw + 0.6rem);
+  font-weight: bold;
+  color: gray;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: select;
+  border-bottom: 1px solid #C8C8C8;
+  height: 35px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.trade-securely__revenue-calculator__card__input button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100px;
+  background-color: #3671E9;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: button;
+}
+
+.trade-securely__revenue-calculator__card__estimation {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: estimation;
+  background: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 1fr 30px 60px 20px 1fr;
+      grid-template-rows: 1fr 30px 60px 20px 1fr;
+      grid-template-areas: "." "title" "result" "note" ".";
+}
+
+.trade-securely__revenue-calculator__card__estimation__title {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: title;
+  background-color: white;
+  color: #3671E9;
+  font-weight: bold;
+  font-size: calc(0.4vw + 0.5rem);
+  letter-spacing: 1px;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.trade-securely__revenue-calculator__card__estimation__result {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: result;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: white;
+  -webkit-text-stroke: 1px;
+  letter-spacing: 1px;
+}
+
+.trade-securely__revenue-calculator__card__estimation__result .eth, .trade-securely__revenue-calculator__card__estimation__result .dollar {
+  color: #0D0D2B;
+  font-weight: bolder;
+  font-size: calc(2vw + 0.5rem);
+}
+
+.trade-securely__revenue-calculator__card__estimation__result .dollar {
+  color: #3671E9;
+  margin-right: 20px;
+}
+
+.trade-securely__revenue-calculator__card__estimation__note {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: note;
+  color: #C8C8C8;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: calc(0.4vw + 0.5rem);
+  letter-spacing: 1px;
+}
+
+.trade-securely__crypto-currencies {
+  background: -webkit-gradient(linear, left top, left bottom, from(#F8F9FB), to(#FAFBFF));
+  background: linear-gradient(to bottom, #F8F9FB, #FAFBFF);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr 50px;
+      grid-template-columns: 50px 1fr 50px;
+  -ms-grid-rows: 250px 80px 1fr 50px;
+      grid-template-rows: 250px 80px 1fr 50px;
+      grid-template-areas: ". . ." ". title ." ". cards ." ". . .";
+}
+
+.trade-securely__crypto-currencies__title {
+  background-color: linear-gradient(to top, #F8F9FB, #FAFBFF);
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: title;
+}
+
+.trade-securely__crypto-currencies__title h2 {
+  color: #0D0D2B;
+  font-family: sans-serif;
+  font-size: 2rem;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.trade-securely__crypto-currencies__cards {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: cards;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20px 1fr 20px 1fr 20px 1fr 20px;
+      grid-template-columns: 20px 1fr 20px 1fr 20px 1fr 20px;
+  -ms-grid-rows: 50px 1fr 20px;
+      grid-template-rows: 50px 1fr 20px;
+      grid-template-areas: ". . . . . . ." ". one . two . three ." ". . . . . . .";
+}
+
+.trade-securely__crypto-currencies__cards__card--one, .trade-securely__crypto-currencies__cards__card--two, .trade-securely__crypto-currencies__cards__card--three {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20px 1fr 20px;
+      grid-template-columns: 20px 1fr 20px;
+  -ms-grid-rows: 50px 2fr 1fr 2fr 50px 50px;
+      grid-template-rows: 50px 2fr 1fr 2fr 50px 50px;
+}
+
+.trade-securely__crypto-currencies__cards__card--one {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: one;
+  background-color: #2B076E;
+  border-radius: 10px;
+      grid-template-areas: ". . ." ". logo ." ". name ." ". description ." ". button ." ". . .";
+}
+
+.trade-securely__crypto-currencies__cards__card--one__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: logo;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.trade-securely__crypto-currencies__cards__card--one__logo img {
+  width: 60px;
+  height: 60px;
+}
+
+.trade-securely__crypto-currencies__cards__card--one__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: name;
+}
+
+.trade-securely__crypto-currencies__cards__card--one__name--primary {
+  font-size: calc(1.5vw + 0.5rem);
+  font-family: sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
+.trade-securely__crypto-currencies__cards__card--one__name--secondary {
+  font-size: calc(0.5vw + 0.5rem);
+  color: #C8C8C8;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.trade-securely__crypto-currencies__cards__card--one__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: description;
+}
+
+.trade-securely__crypto-currencies__cards__card--one__description span {
+  font-size: calc(0.45vw + 0.5rem);
+  line-height: 180%;
+  color: #C8C8C8;
+  text-align: center;
+  font-weight: bold;
+}
+
+.trade-securely__crypto-currencies__cards__card--one__button {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: button;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-self: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  width: 150px;
+  height: 50px;
+  border-radius: 100px;
+  background-color: #3671E9;
+  cursor: pointer;
+}
+
+.trade-securely__crypto-currencies__cards__card--one__button__circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.trade-securely__crypto-currencies__cards__card--one__button span {
+  position: absolute;
+  left: 20px;
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+}
+
+.trade-securely__crypto-currencies__cards__card--two {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: two;
+  background-color: #2B076E;
+  border-radius: 10px;
+      grid-template-areas: ". . ." ". logo ." ". name ." ". description ." ". button ." ". . .";
+  background-color: white;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: logo;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__logo img {
+  width: 60px;
+  height: 60px;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: name;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__name--primary {
+  font-size: calc(1.5vw + 0.5rem);
+  font-family: sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__name--secondary {
+  font-size: calc(0.5vw + 0.5rem);
+  color: #C8C8C8;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: description;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__description span {
+  font-size: calc(0.45vw + 0.5rem);
+  line-height: 180%;
+  color: #C8C8C8;
+  text-align: center;
+  font-weight: bold;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__button {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: button;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-self: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  width: 150px;
+  height: 50px;
+  border-radius: 100px;
+  background-color: #3671E9;
+  cursor: pointer;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__button__circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__button span {
+  position: absolute;
+  left: 20px;
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__name--primary {
+  color: #0D0D2B;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__button--two {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: button;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.trade-securely__crypto-currencies__cards__card--two__button--two__circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #C8C8C8;
+  background-color: white;
+}
+
+.trade-securely__crypto-currencies__cards__card--three {
+  -ms-grid-row: 2;
+  -ms-grid-column: 6;
+  grid-area: three;
+  background-color: #2B076E;
+  border-radius: 10px;
+      grid-template-areas: ". . ." ". logo ." ". name ." ". description ." ". button ." ". . .";
+  background-color: white;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: logo;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__logo img {
+  width: 60px;
+  height: 60px;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: name;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__name--primary {
+  font-size: calc(1.5vw + 0.5rem);
+  font-family: sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__name--secondary {
+  font-size: calc(0.5vw + 0.5rem);
+  color: #C8C8C8;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: description;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__description span {
+  font-size: calc(0.45vw + 0.5rem);
+  line-height: 180%;
+  color: #C8C8C8;
+  text-align: center;
+  font-weight: bold;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__button {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: button;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-self: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  width: 150px;
+  height: 50px;
+  border-radius: 100px;
+  background-color: #3671E9;
+  cursor: pointer;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__button__circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__button span {
+  position: absolute;
+  left: 20px;
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__name--primary {
+  color: #0D0D2B;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__button--three {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: button;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.trade-securely__crypto-currencies__cards__card--three__button--three__circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #C8C8C8;
+  background-color: white;
 }
 
 .features {
-  background-color: orangered;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 200px 1fr;
+      grid-template-rows: 200px 1fr;
+  background-color: gray;
+}
+
+.features__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #2B076E;
+}
+
+.features__heading h2 {
+  color: white;
+  font-family: sans-serif;
+  font-size: 2rem;
+  line-height: 150%;
+  text-align: center;
+}
+
+.features__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+}
+
+.features__content__invest-smart {
+  background-color: #2B076E;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr 1fr 50px;
+      grid-template-columns: 50px 1fr 1fr 50px;
+  -ms-grid-rows: 50px 1fr 50px;
+      grid-template-rows: 50px 1fr 50px;
+      grid-template-areas: ". . . ." ". content illustration ." ". . . .";
+}
+
+.features__content__invest-smart__content-card {
+  display: -ms-grid;
+  display: grid;
+      grid-template-columns: 50px auto 50px;
+      grid-template-rows: 100px 20px 130px 50px 100px;
+      grid-template-areas: ". . ." ". heading ." ". paragraph ." ". button ." ". . .";
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: content;
+  background-color: #2B076E;
+}
+
+.features__content__invest-smart__content-card h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: calc(1.5vw + 0.5rem);
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: heading;
+  color: white;
+  font-weight: bolder;
+}
+
+.features__content__invest-smart__content-card p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: paragraph;
+  font-size: calc(0.5vw + 0.5rem);
+  line-height: 180%;
+}
+
+.features__content__invest-smart__content-card button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: button;
+  width: 130px;
+  height: 45px;
+  border-radius: 100px;
+  background-color: #3671E9;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.features__content__invest-smart__illustration-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: illustration;
+  background-color: #2B076E;
+}
+
+.features__content__invest-smart__illustration-card img {
+  width: calc(580px * 0.8);
+}
+
+.features__content__statistics {
+  background-color: #2B076E;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr 1fr 50px;
+      grid-template-columns: 50px 1fr 1fr 50px;
+  -ms-grid-rows: 50px 1fr 50px;
+      grid-template-rows: 50px 1fr 50px;
+      grid-template-areas: ". . . ." ". content illustration ." ". . . .";
+      grid-template-areas: ". . . ." ". illustration content ." ". . . .";
+}
+
+.features__content__statistics__content-card {
+  display: -ms-grid;
+  display: grid;
+      grid-template-columns: 50px auto 50px;
+      grid-template-rows: 100px 20px 130px 50px 100px;
+      grid-template-areas: ". . ." ". heading ." ". paragraph ." ". button ." ". . .";
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: content;
+  background-color: #2B076E;
+}
+
+.features__content__statistics__content-card h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: calc(1.5vw + 0.5rem);
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: heading;
+  color: white;
+  font-weight: bolder;
+}
+
+.features__content__statistics__content-card p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: paragraph;
+  font-size: calc(0.5vw + 0.5rem);
+  line-height: 180%;
+}
+
+.features__content__statistics__content-card button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: button;
+  width: 130px;
+  height: 45px;
+  border-radius: 100px;
+  background-color: #3671E9;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.features__content__statistics__illustration-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: illustration;
+  background-color: #2B076E;
+}
+
+.features__content__statistics__illustration-card img {
+  width: calc(580px * 0.8);
+}
+
+.features__content__grow-profit {
+  background-color: #2B076E;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr 1fr 50px;
+      grid-template-columns: 50px 1fr 1fr 50px;
+  -ms-grid-rows: 50px 1fr 50px;
+      grid-template-rows: 50px 1fr 50px;
+      grid-template-areas: ". . . ." ". content illustration ." ". . . .";
+}
+
+.features__content__grow-profit__content-card {
+  display: -ms-grid;
+  display: grid;
+      grid-template-columns: 50px auto 50px;
+      grid-template-rows: 100px 20px 130px 50px 100px;
+      grid-template-areas: ". . ." ". heading ." ". paragraph ." ". button ." ". . .";
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: content;
+  background-color: #2B076E;
+}
+
+.features__content__grow-profit__content-card h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: calc(1.5vw + 0.5rem);
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: heading;
+  color: white;
+  font-weight: bolder;
+}
+
+.features__content__grow-profit__content-card p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: paragraph;
+  font-size: calc(0.5vw + 0.5rem);
+  line-height: 180%;
+}
+
+.features__content__grow-profit__content-card button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: button;
+  width: 130px;
+  height: 45px;
+  border-radius: 100px;
+  background-color: #3671E9;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.features__content__grow-profit__illustration-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: illustration;
+  background-color: #2B076E;
+}
+
+.features__content__grow-profit__illustration-card img {
+  width: calc(580px * 0.8);
 }
 
 .start-mining {
-  background-color: indianred;
+  background: -webkit-gradient(linear, left bottom, left top, from(#0D0D2B), to(#2B076E));
+  background: linear-gradient(to top, #0D0D2B, #2B076E);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr 50px;
+      grid-template-columns: 50px 1fr 50px;
+  -ms-grid-rows: 50px 150px 50px;
+      grid-template-rows: 50px 150px 50px;
+      grid-template-areas: ". . ." ". card ." ". . .";
+}
+
+.start-mining__card {
+  position: relative;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: card;
+  border-radius: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20px 1fr 1fr 20px;
+      grid-template-columns: 20px 1fr 1fr 20px;
+  -ms-grid-rows: 20px 1fr 20px;
+      grid-template-rows: 20px 1fr 20px;
+      grid-template-areas: ". . . ." ". content subscribe ." ". . . .";
+  background: #3671E9;
+}
+
+.start-mining__card img {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 100px;
+  height: 100px;
+}
+
+.start-mining__card__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: content;
+  background: #3671E9;
+}
+
+.start-mining__card__content h3 {
+  color: white;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+}
+
+.start-mining__card__content p {
+  font-size: calc(0.45vw + 0.5rem);
+  line-height: 180%;
+  color: #C8C8C8;
+  font-weight: bold;
+}
+
+.start-mining__card__subscribe {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: subscribe;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 20px 1fr;
+      grid-template-columns: 3fr 20px 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "input . button";
+  background-color: #3671E9;
+}
+
+.start-mining__card__subscribe input {
+  background-color: #3671E9;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border: none;
+  outline: none;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: input;
+  font-size: calc(0.5vw + 0.6rem);
+  font-weight: bold;
+  color: white;
+  border-bottom: 1px solid #C8C8C8;
+  height: 35px;
+  letter-spacing: 2px;
+}
+
+.start-mining__card__subscribe input::-webkit-input-placeholder {
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+  color: #C8C8C8;
+  letter-spacing: 1px;
+}
+
+.start-mining__card__subscribe input:-ms-input-placeholder {
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+  color: #C8C8C8;
+  letter-spacing: 1px;
+}
+
+.start-mining__card__subscribe input::-ms-input-placeholder {
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+  color: #C8C8C8;
+  letter-spacing: 1px;
+}
+
+.start-mining__card__subscribe input::placeholder {
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+  color: #C8C8C8;
+  letter-spacing: 1px;
+}
+
+.start-mining__card__subscribe button {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: button;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  border-radius: 100px;
+  background-color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #0D0D2B;
+  font-weight: bold;
+  letter-spacing: 1px;
+  z-index: 3;
 }
 
 .footer {
-  background-color: burlywood;
+  background-color: #0D0D2B;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr 50px;
+      grid-template-columns: 50px 1fr 50px;
+  -ms-grid-rows: 50px 1fr 150px 50px;
+      grid-template-rows: 50px 1fr 150px 50px;
+      grid-template-areas: ". . ." ". navigation ." ". bar ." ". . .";
+}
+
+.footer__navigation {
+  background-color: #0D0D2B;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.5fr 1fr 1.5fr 2fr;
+      grid-template-columns: 1.5fr 1fr 1.5fr 2fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: navigation;
+}
+
+.footer__navigation__logo img {
+  width: calc(135px * 0.8);
+  height: calc(40px * 0.8);
+}
+
+.footer__navigation__quick-links {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 50px 1fr;
+      grid-template-rows: 50px 1fr;
+}
+
+.footer__navigation__quick-links h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: calc(0.8vw + 0.5rem);
+  color: white;
+}
+
+.footer__navigation__quick-links ul {
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (30px)[5];
+      grid-template-rows: repeat(5, 30px);
+}
+
+.footer__navigation__quick-links ul li {
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+  color: #C8C8C8;
+  cursor: pointer;
+}
+
+.footer__navigation__quick-links ul li:hover {
+  color: white;
+}
+
+.footer__navigation__Resources {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 50px 1fr;
+      grid-template-rows: 50px 1fr;
+}
+
+.footer__navigation__Resources h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: calc(0.8vw + 0.5rem);
+  color: white;
+}
+
+.footer__navigation__Resources ul {
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (30px)[5];
+      grid-template-rows: repeat(5, 30px);
+}
+
+.footer__navigation__Resources ul li {
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+  color: #C8C8C8;
+  cursor: pointer;
+}
+
+.footer__navigation__Resources ul li:hover {
+  color: white;
+}
+
+.footer__navigation__payment {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 50px 1fr;
+      grid-template-rows: 50px 1fr;
+}
+
+.footer__navigation__payment__heading h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: calc(1.5vw + 0.5rem);
+  color: white;
+  letter-spacing: 1px;
+  line-height: 150%;
+}
+
+.footer__navigation__payment__methods {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+      grid-template-columns: 1fr 20px 1fr 20px 1fr;
+  -ms-grid-rows: 50px 1fr 50px;
+      grid-template-rows: 50px 1fr 50px;
+      grid-template-areas: ". . . . ." "visa . mastercard . bitcoin" ". . . . .";
+}
+
+.footer__navigation__payment__visa {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: visa;
+  cursor: pointer;
+}
+
+.footer__navigation__payment__master-card {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: mastercard;
+  cursor: pointer;
+}
+
+.footer__navigation__payment__bitcoin {
+  -ms-grid-row: 2;
+  -ms-grid-column: 5;
+  grid-area: bitcoin;
+  cursor: pointer;
+}
+
+.footer__bottom-bar {
+  background-color: #0D0D2B;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: bar;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 4fr 1fr;
+      grid-template-columns: 4fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+.footer__bottom-bar__copy {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.footer__bottom-bar__copy span {
+  font-size: calc(0.5vw + 0.5rem);
+  font-weight: bold;
+  color: #C8C8C8;
+  letter-spacing: 1px;
+}
+
+.footer__bottom-bar__social {
+  display: -ms-grid;
+  display: grid;
+  align-self: flex-end;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+}
+
+.footer__bottom-bar__social img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #C8C8C8;
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 80px 600px 620px auto auto auto auto;
+      grid-template-rows: 80px 600px 620px auto auto auto auto;
+  overflow-x: hidden;
 }
 /*# sourceMappingURL=style.css.map */

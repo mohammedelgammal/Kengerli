@@ -1,0 +1,251 @@
+@import 'colors';
+@import 'mixins';
+
+.trade-securely {
+    position: relative;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 300px 800px;
+    
+        &__earnings {
+            @include centering();
+            align-items: flex-start;
+            background: $primary-color;
+
+                &__card {
+                    @include centering();
+                    flex-direction: column;
+                    text-align: center;
+
+                        h2 {
+                            color: white;
+                            font-family: sans-serif;
+                            font-size: 2rem;
+                        }
+                        
+                        p {
+                            font-size: calc(0.45vw + 0.5rem);
+                            line-height: 180%;
+                            color: $font-color;
+                            margin: 20px 0px; 
+                        }
+                }
+        }
+        &__revenue-calculator {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            grid-template-rows: 100%;
+            grid-template-areas: 
+                ". card .";
+            position: absolute;
+            height: 300px;
+            width: 100vw;
+            top: 170px;
+            background-color: $gray-gradient;
+            
+
+                &__card {
+                    justify-self: center;
+                    display: grid;
+                    grid-template-columns: 20px 1fr 20px;
+                    grid-template-rows: 20px 100px 1fr 20px;
+                    grid-template-areas: 
+                        ". . ."
+                        ". input ."
+                        ". estimation ."
+                        ". . .";
+                    grid-area: card;
+                    background-color: white;
+                    opacity: 0.98;
+                    height: 100%;
+                    width: 700px;
+                    border-radius: 10px;
+                    
+
+                        &__input {
+                            grid-area: input;
+                            align-self: center;
+                            background: white;
+                            display: grid;
+                            grid-template-columns: 2fr 20px 1fr 20px 1fr;
+                            grid-template-rows: 50px;
+                            grid-template-areas: 
+                                "input . select . button";
+                                
+                                input {
+                                    position: relative;
+                                    background-color: white;
+                                    border: none;
+                                    outline: none;
+                                    grid-area: input;
+                                    font-size: calc(0.5vw + 0.6rem);
+                                    font-weight: bold;
+                                    color: gray;
+                                    border-bottom: 1px solid $font-color;
+                                    height: 35px;
+                                    align-self: center;
+                                    letter-spacing: 2px;
+                                }
+
+                                input::placeholder {
+                                    font-size: calc(0.5vw + 0.5rem);
+                                    font-weight: bold;
+                                    color: gray;
+                                    letter-spacing: 1px;
+                                }
+
+                                select {
+                                    background-color: white;
+                                    border: none;
+                                    outline: none;
+                                    font-size: calc(0.5vw + 0.6rem);
+                                    font-weight: bold;
+                                    color: gray;
+                                    grid-area: select;
+                                    border-bottom: 1px solid $font-color;
+                                    height: 35px;
+                                    align-self: center;
+                                }
+                                button {
+                                    @include centering();
+                                    border-radius: 100px;
+                                    background-color: $accent-color;
+                                    border: none;
+                                    outline: none;
+                                    cursor: pointer;
+                                    color: white;
+                                    font-weight: bold;
+                                    letter-spacing: 1px;
+                                    grid-area: button;
+                                }
+                        }
+
+                        &__estimation {
+                            grid-area: estimation;
+                            background: white;
+                            display: grid;
+                            grid-template-columns: 100%;
+                            grid-template-rows: 1fr 30px 60px 20px 1fr;
+                            grid-template-areas: 
+                                "."
+                                "title"
+                                "result"
+                                "note"
+                                ".";
+
+                                &__title {
+                                    grid-area: title;
+                                    background-color: white;
+                                    color: $accent-color;
+                                    font-weight: bold;
+                                    font-size: calc(0.4vw + 0.5rem);
+                                    letter-spacing: 1px;
+                                    align-self: center;
+                                }
+
+                                &__result {
+                                    grid-area: result;
+                                    align-self: center;
+                                    background-color: white;
+                                    -webkit-text-stroke: 1px;
+                                    letter-spacing: 1px;
+                                    
+
+                                        .eth {
+                                            color: $primary-color;
+                                            font-weight: bolder;
+                                            font-size: calc(2vw + 0.5rem);
+                                        }
+
+                                        .dollar {
+                                            color: $accent-color;
+                                            @extend .eth;
+                                            margin-right: 20px;
+                                        }
+                                }
+                                &__note {
+                                    grid-area: note;
+                                    color: $font-color;
+                                    align-self: center;
+                                    font-size: calc(0.4vw + 0.5rem);
+                                    letter-spacing: 1px;
+                                }
+                        }
+                }
+        }
+        &__crypto-currencies {
+            background: $gray-gradient;
+            display: grid;
+            grid-template-columns: 50px 1fr 50px;
+            grid-template-rows: 250px 80px 1fr 50px;
+            grid-template-areas: 
+                ". . ."
+                ". title ."
+                ". cards ."
+                ". . .";
+
+                &__title {
+                    background-color: $gray-gradient-top;
+                    grid-area: title;
+
+                        h2 {
+                            color: $primary-color;
+                            font-family: sans-serif;
+                            font-size: 2rem;
+                            font-weight: bolder;
+                            text-align: center;
+                        }
+                }
+                &__cards {
+                    grid-area: cards;
+                    display: grid;
+                    grid-template-columns: 20px 1fr 20px 1fr 20px 1fr 20px;
+                    grid-template-rows: 50px 1fr 20px;
+                    grid-template-areas: 
+                        ". . . . . . ."
+                        ". one . two . three ."
+                        ". . . . . . .";
+
+                        &__card--one, &__card--two, &__card--three {
+                            display: grid;
+                            grid-template-columns: 20px 1fr 20px;
+                            grid-template-rows: 50px 2fr 1fr 2fr 50px 50px;                            
+                        }
+
+                        &__card--one {
+                            grid-area: one;
+                            @include cardStyle();
+
+                        }
+                        &__card--two {
+                            grid-area: two;
+                            @include cardStyle();  
+                            background-color: white;  
+
+                                &__name {
+                                    &--primary {
+                                        color: $primary-color;
+                                    }
+                                } 
+                                &__button--two {
+                                    @include cardButton();
+                                }                          
+                        }
+                        &__card--three {
+                            grid-area: three;
+                            @include cardStyle();
+                            background-color: white;
+
+                                &__name {
+                                    &--primary {
+                                        color: $primary-color;
+                                    }
+                                } 
+                                &__button--three {
+                                    @include cardButton();
+                                }
+                        }
+
+                }
+        }           
+}

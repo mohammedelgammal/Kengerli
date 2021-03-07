@@ -1,0 +1,41 @@
+@import 'colors';
+@import 'mixins';
+
+.features {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 200px 1fr;
+    background-color: gray;
+
+        &__heading {
+            @include centering();
+            background-color: $secondary-color;
+                
+                h2 {
+                    color: white;
+                    font-family: sans-serif;
+                    font-size: 2rem;
+                    line-height: 150%;
+                    text-align: center;
+                }
+        }
+        &__content {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 1fr 1fr 1fr;
+
+                &__invest-smart {
+                    @include featureStyle();
+                }
+                &__statistics {
+                    @include featureStyle();
+                    grid-template-areas: 
+                    ". . . ."
+                    ". illustration content ."
+                    ". . . .";
+                }
+                &__grow-profit {
+                    @include featureStyle();
+                }
+        }
+}        

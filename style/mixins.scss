@@ -1,0 +1,163 @@
+@mixin centering(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin cardStyle {
+    background-color: $secondary-color;
+    border-radius: 10px;
+    grid-template-areas: 
+        ". . ."
+        ". logo ."
+        ". name ."
+        ". description ."
+        ". button ."
+        ". . .";
+
+    &__logo {
+        @include centering();
+        align-self: flex-start;
+        grid-area: logo;
+        border-radius: 10px 10px 0px 0px;
+
+            img {
+                width: 60px;
+                height: 60px;
+            }
+    }
+    &__name {
+        @include centering();
+        grid-area: name;
+
+            &--primary {
+                font-size: calc(1.5vw + 0.5rem);
+                font-family: sans-serif;
+                color: white;
+                font-weight: bold;
+            }
+            &--secondary {
+                font-size: calc(0.5vw + 0.5rem);
+                color: $font-color;
+                font-weight: bold;
+                margin-left: 5px; 
+            }
+    }
+    &__description {
+        @include centering();
+        grid-area: description;
+
+            span {
+                font-size: calc(0.45vw + 0.5rem);
+                line-height: 180%;
+                color: $font-color;
+                text-align: center;
+                font-weight: bold;
+            }
+    }
+    &__button {
+        grid-area: button;
+        @include centering();
+        justify-self: center;
+        align-self: flex-end;
+        justify-content: flex-start;
+        position: relative;
+        width: 150px;
+        height: 50px;
+        border-radius: 100px;
+        background-color: $accent-color;
+        cursor: pointer;
+
+            &__circle {
+                @include centering();
+                position: absolute;
+                right: 10px;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: white;
+            }
+
+            span {
+                position: absolute;
+                left: 20px;
+                font-size: calc(0.5vw + 0.5rem);
+                font-weight: bold;
+            }
+        }
+}
+
+@mixin cardButton {
+    grid-area: button; 
+    @include centering();
+
+        &__circle {
+            @include centering();
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid $font-color;
+            background-color: white;
+        }
+}
+
+@mixin featureStyle {
+    background-color: $secondary-color;
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr 50px;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas: 
+        ". . . ."
+        ". content illustration ."
+        ". . . .";
+
+        &__content-card {
+            display: grid;
+            grid-template-columns: 50px auto 50px;
+            grid-template-rows: 100px 20px 130px 50px 100px;
+            grid-template-areas: 
+                ". . ."
+                ". heading ."
+                ". paragraph ."
+                ". button ."
+                ". . .";
+            grid-area: content; 
+            background-color: $secondary-color;   
+
+                h3 {
+                    @include centering();
+                    justify-content: flex-start;
+                    font-size: calc(1.5vw + 0.5rem);
+                    grid-area: heading;
+                    color: white;
+                    font-weight: bolder;
+                } 
+                p {
+                    @include centering();
+                    justify-content: flex-start;
+                    grid-area: paragraph;
+                    font-size: calc(0.5vw + 0.5rem);
+                    line-height: 180%;
+                }
+                button {
+                    @include centering();
+                    grid-area: button;
+                    width: 130px;
+                    height: 45px;
+                    border-radius: 100px;
+                    background-color: $accent-color;
+                    cursor: pointer;
+                    outline: none;
+                    border: none; 
+                }
+        }
+        &__illustration-card {
+            @include centering();
+            grid-area: illustration;  
+            background-color: $secondary-color;
+            
+                img {
+                    width: calc(580px * 0.8);
+                }
+        }
+}
