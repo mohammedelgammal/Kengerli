@@ -115,9 +115,9 @@
   display: grid;
   -ms-grid-columns: 50px 1fr 1fr 50px;
       grid-template-columns: 50px 1fr 1fr 50px;
-  -ms-grid-rows: 100%;
-      grid-template-rows: 100%;
-      grid-template-areas: ". value illustration .";
+  -ms-grid-rows: 1fr 100px;
+      grid-template-rows: 1fr 100px;
+      grid-template-areas: ". value illustration ." ". . . .";
   background-color: #0D0D2B;
 }
 
@@ -218,7 +218,7 @@
 .main__value__heading h1 {
   color: white;
   font-family: sans-serif;
-  font-size: 3rem;
+  line-height: 150%;
 }
 
 .main__value__paragraph {
@@ -266,27 +266,24 @@
 }
 
 .main__value__try__button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  position: relative;
-  width: 150px;
-  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15px auto 10px auto 15px;
+      grid-template-columns: 15px auto 10px auto 15px;
+  -ms-grid-rows: 10px 30px 10px;
+      grid-template-rows: 10px 30px 10px;
+      grid-template-areas: ". . . . ." ". text . circle ." ". . . . .";
   border-radius: 100px;
   background-color: #3671E9;
   cursor: pointer;
 }
 
 .main__value__try__button__circle {
+  height: 30px;
+  width: 30px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: circle;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -296,17 +293,16 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
-  right: 10px;
-  width: 30px;
-  height: 30px;
   border-radius: 50%;
   background-color: white;
 }
 
 .main__value__try__button span {
-  position: absolute;
-  left: 20px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: text;
+  -ms-flex-item-align: center;
+      align-self: center;
   font-size: calc(0.5vw + 0.5rem);
   font-weight: bold;
 }
@@ -345,35 +341,36 @@
   display: grid;
   -ms-grid-columns: 50px 1fr 50px;
       grid-template-columns: 50px 1fr 50px;
-  -ms-grid-rows: 100px 500px;
-      grid-template-rows: 100px 500px;
-      grid-template-areas: ". numbers ." ". content .";
+  -ms-grid-rows: 50px auto 50px auto 100px;
+      grid-template-rows: 50px auto 50px auto 100px;
+      grid-template-areas: ". . ." ". numbers ." ". . ." ". content ." ". . .";
   z-index: 3;
   background-color: #0D0D2B;
 }
 
 .why-crappo__numbers {
-  -ms-grid-row: 1;
+  -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: numbers;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
   background-color: #0D0D2B;
 }
 
 .why-crappo__numbers__number {
   display: -ms-grid;
   display: grid;
+  -ms-grid-column-align: center;
+      justify-self: center;
   -ms-grid-columns: 80px auto;
       grid-template-columns: 80px auto;
   -ms-grid-rows: 60px 20px;
       grid-template-rows: 60px 20px;
       grid-template-areas: "icon num" "icon text";
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -499,6 +496,7 @@
   color: white;
   font-family: sans-serif;
   font-size: 2rem;
+  line-height: 180%;
 }
 
 .why-crappo__content__text p {
@@ -538,8 +536,8 @@
   position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   -ms-grid-rows: 300px 800px;
       grid-template-rows: 300px 800px;
 }
@@ -1321,7 +1319,6 @@
       grid-template-columns: 100%;
   -ms-grid-rows: 200px 1fr;
       grid-template-rows: 200px 1fr;
-  background-color: gray;
 }
 
 .features__heading {
@@ -2066,8 +2063,904 @@ body {
   display: grid;
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
-  -ms-grid-rows: 80px 600px 620px auto auto auto auto;
-      grid-template-rows: 80px 600px 620px auto auto auto auto;
+  -ms-grid-rows: 80px auto auto auto auto auto auto;
+      grid-template-rows: 80px auto auto auto auto auto auto;
   overflow-x: hidden;
+  background-color: #0D0D2B;
+}
+
+@media all and (max-width: 992px) {
+  .header {
+    -ms-grid-columns: 20px 1fr 1fr 20px;
+        grid-template-columns: 20px 1fr 1fr 20px;
+    -ms-grid-rows: 20px 40px 20px;
+        grid-template-rows: 20px 40px 20px;
+        grid-template-areas: ". . . ." ". logo nav ." ". . . .";
+  }
+  .header__logo {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: logo;
+    -ms-grid-columns: 20px;
+        grid-template-columns: 20px;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+  }
+  .header__nav {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: nav;
+    -ms-grid-columns: 1fr 3fr;
+        grid-template-columns: 1fr 3fr;
+    -ms-grid-rows: 100%;
+        grid-template-rows: 100%;
+        grid-template-areas: ". signin .";
+  }
+  .header__nav__menu {
+    display: none;
+  }
+  .header__nav__sign-in {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: signin;
+  }
+  .main {
+    background-color: #0D0D2B;
+    -ms-grid-columns: 20px 1fr 20px;
+        grid-template-columns: 20px 1fr 20px;
+    -ms-grid-rows: 1fr 1fr 100px;
+        grid-template-rows: 1fr 1fr 100px;
+        grid-template-areas: ". value ." ". illustration ." ". . .";
+  }
+  .main__value {
+    background-color: #0D0D2B;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: value;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 100px 30px 20px auto 20px 40px 20px 50px 20px;
+        grid-template-rows: 100px 30px 20px auto 20px 40px 20px 50px 20px;
+        grid-template-areas: "." "info" "." "heading" "." "paragraph" "." "try" ".";
+  }
+  .main__value__info {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: info;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .main__value__heading {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: heading;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
+  }
+  .main__value__heading h1 {
+    font-size: clamp(4vw, 4.5vw, 5vw);
+  }
+  .main__value__paragraph {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    grid-area: paragraph;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
+  }
+  .main__value__try {
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+    grid-area: try;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .main__illustration {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: illustration;
+        justify-self: center;
+  }
+  .main__illustration img {
+    width: calc(604px * 0.6);
+    height: calc(586px * 0.6);
+  }
+  .why-crappo {
+    background-color: #0D0D2B;
+    -ms-grid-columns: 20px auto 20px;
+        grid-template-columns: 20px auto 20px;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: ". numbers ." ". content .";
+  }
+  .why-crappo__numbers {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: numbers;
+    display: -ms-grid;
+    display: grid;
+    grid-column-gap: 10px;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
+  .why-crappo__numbers__number {
+    background-color: #0D0D2B;
+    -ms-grid-columns: 10px auto 10px;
+        grid-template-columns: 10px auto 10px;
+    -ms-grid-rows: auto 10px auto 10px auto;
+        grid-template-rows: auto 10px auto 10px auto;
+        grid-template-areas: ". icon ." ". . ." ". num ." ". . ." ". text .";
+  }
+  .why-crappo__numbers__number__icon {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: icon;
+    width: 80px;
+    height: 80px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .why-crappo__numbers__number__num {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: num;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 100%;
+        grid-template-rows: 100%;
+        grid-template-areas: "text";
+  }
+  .why-crappo__numbers__number__num span {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: text;
+  }
+  .why-crappo__numbers__number__text {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: text;
+        justify-self: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100%;
+        grid-template-areas: "text";
+  }
+  .why-crappo__numbers__number__text span {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: text;
+  }
+  .why-crappo__content {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: content;
+    display: -ms-grid;
+    display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr;
+  }
+  .why-crappo__content__image {
+    margin-bottom: 50px;
+  }
+  .why-crappo__content__image img {
+    width: calc(650px * 0.6);
+    height: calc(473px * 0.6);
+  }
+  .why-crappo__content__text {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
+    background-color: #0D0D2B;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 0px;
+  }
+  .trade-securely {
+    background: -webkit-gradient(linear, left top, left bottom, from(#F8F9FB), to(#FAFBFF));
+    background: linear-gradient(to bottom, #F8F9FB, #FAFBFF);
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 300px auto 800px 50px;
+        grid-template-rows: 300px auto 800px 50px;
+        grid-template-areas: "earn" "calc" "crypto" ".";
+  }
+  .trade-securely__earnings {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: earn;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .trade-securely__revenue-calculator {
+    height: 300px;
+    width: 100vw;
+    position: relative;
+    background-color: white;
+    top: 0px;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: calc;
+  }
+  .trade-securely__crypto-currencies {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: crypto;
+    background: -webkit-gradient(linear, left top, left bottom, from(#F8F9FB), to(#FAFBFF));
+    background: linear-gradient(to bottom, #F8F9FB, #FAFBFF);
+    -ms-grid-columns: 20px 1fr 40px;
+        grid-template-columns: 20px 1fr 40px;
+    -ms-grid-rows: 1fr 1.5fr;
+        grid-template-rows: 1fr 1.5fr;
+        grid-template-areas: ". title ." ". cards .";
+  }
+  .trade-securely__crypto-currencies__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: title;
+    background: -webkit-gradient(linear, left bottom, left top, from(#F8F9FB), to(#FAFBFF));
+    background: linear-gradient(to top, #F8F9FB, #FAFBFF);
+  }
+  .trade-securely__crypto-currencies__cards {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: cards;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+        grid-template-columns: 1fr 20px 1fr 20px 1fr;
+    -ms-grid-rows: 50px 1fr 20px;
+        grid-template-rows: 50px 1fr 20px;
+        grid-template-areas: ". . . . ." "one . two . three" ". . . . .";
+  }
+  .trade-securely__crypto-currencies__cards__card--one {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: one;
+  }
+  .trade-securely__crypto-currencies__cards__card--two {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: two;
+  }
+  .trade-securely__crypto-currencies__cards__card--three {
+    -ms-grid-row: 2;
+    -ms-grid-column: 5;
+    grid-area: three;
+  }
+  .features {
+    background-color: #2B076E;
+  }
+  .features__heading {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .features__content {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: (auto)[3];
+        grid-template-rows: repeat(3, auto);
+  }
+  .features__content__invest-smart {
+    -ms-grid-columns: 50px 1fr 50px;
+        grid-template-columns: 50px 1fr 50px;
+    -ms-grid-rows: 50px auto auto 50px;
+        grid-template-rows: 50px auto auto 50px;
+        grid-template-areas: ". . ." ". content ." ". illustration ." ". . .";
+  }
+  .features__content__invest-smart__content-card {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: content;
+        justify-self: center;
+  }
+  .features__content__invest-smart__content-card h3 {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
+  }
+  .features__content__invest-smart__content-card p {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
+  }
+  .features__content__invest-smart__content-card button {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
+  }
+  .features__content__invest-smart__illustration-card {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: illustration;
+  }
+  .features__content__statistics {
+    -ms-grid-columns: 50px 1fr 50px;
+        grid-template-columns: 50px 1fr 50px;
+    -ms-grid-rows: 50px auto auto 50px;
+        grid-template-rows: 50px auto auto 50px;
+        grid-template-areas: ". . ." ". content ." ". illustration ." ". . .";
+  }
+  .features__content__statistics__content-card {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: content;
+        justify-self: center;
+  }
+  .features__content__statistics__content-card h3 {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
+  }
+  .features__content__statistics__content-card p {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
+  }
+  .features__content__statistics__content-card button {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
+  }
+  .features__content__statistics__illustration-card {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: illustration;
+  }
+  .features__content__grow-profit {
+    -ms-grid-columns: 50px 1fr 50px;
+        grid-template-columns: 50px 1fr 50px;
+    -ms-grid-rows: 50px auto auto 50px;
+        grid-template-rows: 50px auto auto 50px;
+        grid-template-areas: ". . ." ". content ." ". illustration ." ". . .";
+  }
+  .features__content__grow-profit__content-card {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: content;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .features__content__grow-profit__content-card h3 {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
+  }
+  .features__content__grow-profit__content-card p {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
+  }
+  .features__content__grow-profit__content-card button {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
+  }
+  .features__content__grow-profit__illustration-card {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: illustration;
+  }
+  .start-mining__card__subscribe {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "input" "button";
+  }
+  .start-mining__card__subscribe input {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: input;
+  }
+  .start-mining__card__subscribe button {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: button;
+  }
+}
+
+@media all and (max-width: 688px) {
+  .header {
+    -ms-grid-columns: 20px 1fr 20px;
+        grid-template-columns: 20px 1fr 20px;
+    -ms-grid-rows: 20px 40px 20px;
+        grid-template-rows: 20px 40px 20px;
+        grid-template-areas: ". . ." ". logo ." ". . .";
+  }
+  .header__logo {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: logo;
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+  .header__nav {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: nav;
+    display: none;
+  }
+  .main {
+    background-color: #0D0D2B;
+    -ms-grid-columns: 20px 1fr 20px;
+        grid-template-columns: 20px 1fr 20px;
+    -ms-grid-rows: 1fr 1fr 100px;
+        grid-template-rows: 1fr 1fr 100px;
+        grid-template-areas: ". value ." ". illustration ." ". . .";
+  }
+  .main__value {
+    background-color: #0D0D2B;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: value;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 50px 30px 20px auto 20px 40px 20px 50px 20px;
+        grid-template-rows: 50px 30px 20px auto 20px 40px 20px 50px 20px;
+        grid-template-areas: "." "info" "." "heading" "." "paragraph" "." "try" ".";
+  }
+  .main__value__info {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: info;
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+  .main__value__heading {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: heading;
+    -ms-grid-column-align: start;
+        justify-self: start;
+    text-align: left;
+  }
+  .main__value__heading h1 {
+    font-size: 6vw;
+  }
+  .main__value__paragraph {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    grid-area: paragraph;
+    -ms-grid-column-align: start;
+        justify-self: start;
+    text-align: left;
+  }
+  .main__value__try {
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+    grid-area: try;
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+  .main__illustration {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: illustration;
+        justify-self: start;
+  }
+  .main__illustration img {
+    width: 250px;
+    height: 250px;
+  }
+  .why-crappo {
+    background-color: #0D0D2B;
+    -ms-grid-columns: 20px auto 20px;
+        grid-template-columns: 20px auto 20px;
+    -ms-grid-rows: auto 50px auto;
+        grid-template-rows: auto 50px auto;
+        grid-template-areas: ". numbers ." ". . ." ". content .";
+  }
+  .why-crappo__numbers {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: numbers;
+    display: -ms-grid;
+    display: grid;
+    grid-column-gap: 10px;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+    grid-row-gap: 40px;
+  }
+  .why-crappo__numbers__number {
+    -ms-grid-column-align: start;
+        justify-self: start;
+    background-color: #0D0D2B;
+    -ms-grid-columns: 80px 20px auto;
+        grid-template-columns: 80px 20px auto;
+    -ms-grid-rows: 60px 20px;
+        grid-template-rows: 60px 20px;
+        grid-template-areas: "icon . num" "icon . text";
+  }
+  .why-crappo__numbers__number__icon {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: icon;
+    width: 80px;
+    height: 80px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .why-crappo__numbers__number__num {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: num;
+    -ms-grid-column-align: start;
+        justify-self: start;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 100%;
+        grid-template-rows: 100%;
+        grid-template-areas: "text";
+  }
+  .why-crappo__numbers__number__num span {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: text;
+  }
+  .why-crappo__numbers__number__text {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: text;
+        justify-self: start;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100%;
+        grid-template-areas: "text";
+  }
+  .why-crappo__numbers__number__text span {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: text;
+  }
+  .why-crappo__content {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: content;
+    display: -ms-grid;
+    display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr;
+  }
+  .why-crappo__content__image {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-bottom: 50px;
+  }
+  .why-crappo__content__image img {
+    width: 250px;
+    height: 250px;
+  }
+  .why-crappo__content__text {
+    -ms-grid-column-align: start;
+        justify-self: start;
+    text-align: left;
+    background-color: #0D0D2B;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-left: 0px;
+  }
+  .trade-securely {
+    background: -webkit-gradient(linear, left top, left bottom, from(#F8F9FB), to(#FAFBFF));
+    background: linear-gradient(to bottom, #F8F9FB, #FAFBFF);
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto auto 50px;
+        grid-template-rows: auto auto 50px;
+        grid-template-areas: "earn" "crypto" ".";
+  }
+  .trade-securely__earnings {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: earn;
+    -webkit-box-align: star;
+        -ms-flex-align: star;
+            align-items: star;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  .trade-securely__earnings__card {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-left: 20px;
+  }
+  .trade-securely__earnings__card h2, .trade-securely__earnings__card p {
+    text-align: left;
+  }
+  .trade-securely__revenue-calculator {
+    display: none;
+  }
+  .trade-securely__crypto-currencies {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: crypto;
+    background: -webkit-gradient(linear, left top, left bottom, from(#F8F9FB), to(#FAFBFF));
+    background: linear-gradient(to bottom, #F8F9FB, #FAFBFF);
+    grid-row-gap: 100px;
+    -ms-grid-columns: 20px 1fr 20px;
+        grid-template-columns: 20px 1fr 20px;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: ". title ." ". cards .";
+  }
+  .trade-securely__crypto-currencies__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 100px;
+    justify-self: start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    text-align: left;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: title;
+    background: -webkit-gradient(linear, left bottom, left top, from(#F8F9FB), to(#FAFBFF));
+    background: linear-gradient(to top, #F8F9FB, #FAFBFF);
+  }
+  .trade-securely__crypto-currencies__title h2 {
+    text-align: left;
+  }
+  .trade-securely__crypto-currencies__cards {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: cards;
+    grid-row-gap: 20px;
+    -ms-grid-columns: 20px 1fr 20px;
+        grid-template-columns: 20px 1fr 20px;
+    -ms-grid-rows: 1fr 1fr 1fr 20px;
+        grid-template-rows: 1fr 1fr 1fr 20px;
+        grid-template-areas: ". one ." ". two ." ". three ." ". . .";
+  }
+  .trade-securely__crypto-currencies__cards__card--one {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: one;
+  }
+  .trade-securely__crypto-currencies__cards__card--two {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: two;
+  }
+  .trade-securely__crypto-currencies__cards__card--three {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: three;
+  }
+  .features {
+    background-color: #2B076E;
+  }
+  .features__heading {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .features__heading h2 {
+    text-align: left;
+    padding: 50px 20px;
+  }
+  .features__content {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: (auto)[3];
+        grid-template-rows: repeat(3, auto);
+  }
+  .features__content__invest-smart {
+    -ms-grid-columns: 50px 1fr 50px;
+        grid-template-columns: 50px 1fr 50px;
+    -ms-grid-rows: 50px auto auto 50px;
+        grid-template-rows: 50px auto auto 50px;
+        grid-template-areas: ". . ." ". content ." ". illustration ." ". . .";
+    -ms-grid-columns: 10px 1fr 10px;
+        grid-template-columns: 10px 1fr 10px;
+  }
+  .features__content__invest-smart__content-card {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: content;
+        justify-self: center;
+  }
+  .features__content__invest-smart__content-card h3 {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
+  }
+  .features__content__invest-smart__content-card p {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
+  }
+  .features__content__invest-smart__content-card button {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
+  }
+  .features__content__invest-smart__illustration-card {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: illustration;
+  }
+  .features__content__invest-smart__content-card {
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+  .features__content__invest-smart__illustration-card img {
+    width: 250px;
+    height: 200px;
+  }
+  .features__content__statistics {
+    -ms-grid-columns: 50px 1fr 50px;
+        grid-template-columns: 50px 1fr 50px;
+    -ms-grid-rows: 50px auto auto 50px;
+        grid-template-rows: 50px auto auto 50px;
+        grid-template-areas: ". . ." ". content ." ". illustration ." ". . .";
+    -ms-grid-columns: 10px 1fr 10px;
+        grid-template-columns: 10px 1fr 10px;
+  }
+  .features__content__statistics__content-card {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: content;
+        justify-self: center;
+  }
+  .features__content__statistics__content-card h3 {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
+  }
+  .features__content__statistics__content-card p {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
+  }
+  .features__content__statistics__content-card button {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
+  }
+  .features__content__statistics__illustration-card {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: illustration;
+  }
+  .features__content__statistics__content-card {
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+  .features__content__statistics__illustration-card img {
+    width: 250px;
+    height: 200px;
+  }
+  .features__content__grow-profit {
+    -ms-grid-columns: 50px 1fr 50px;
+        grid-template-columns: 50px 1fr 50px;
+    -ms-grid-rows: 50px auto auto 50px;
+        grid-template-rows: 50px auto auto 50px;
+        grid-template-areas: ". . ." ". content ." ". illustration ." ". . .";
+    -ms-grid-columns: 10px 1fr 10px;
+        grid-template-columns: 10px 1fr 10px;
+  }
+  .features__content__grow-profit__content-card {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: content;
+        justify-self: center;
+  }
+  .features__content__grow-profit__content-card h3 {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
+  }
+  .features__content__grow-profit__content-card p {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
+  }
+  .features__content__grow-profit__content-card button {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
+  }
+  .features__content__grow-profit__illustration-card {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: illustration;
+  }
+  .features__content__grow-profit__content-card {
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+  .features__content__grow-profit__illustration-card img {
+    width: 250px;
+    height: 200px;
+  }
+  .start-mining {
+    -ms-grid-columns: 20px 1fr 20px;
+        grid-template-columns: 20px 1fr 20px;
+    -ms-grid-rows: 50px 200px 50px;
+        grid-template-rows: 50px 200px 50px;
+        grid-template-areas: ". . ." ". card ." ". . .";
+  }
+  .start-mining__card {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: card;
+    -ms-grid-columns: 20px 1fr 20px;
+        grid-template-columns: 20px 1fr 20px;
+    -ms-grid-rows: 20px 1fr 1fr 20px;
+        grid-template-rows: 20px 1fr 1fr 20px;
+        grid-template-areas: ". . ." ". content ." ". subscribe ." ". . .";
+  }
+  .start-mining__card__content {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: content;
+  }
+  .start-mining__card__subscribe {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: subscribe;
+  }
+  .start-mining__card__subscribe input {
+    margin-bottom: 10px;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: input;
+  }
+  .start-mining__card__subscribe button {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: button;
+  }
+  .footer__navigation {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    grid-row-gap: 20px;
+  }
+  .footer__bottom-bar {
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+  }
 }
 /*# sourceMappingURL=style.css.map */

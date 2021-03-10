@@ -161,3 +161,33 @@
                 }
         }
 }
+@mixin responsive-fs {
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 50px auto auto 50px;
+    grid-template-areas: 
+        ". . ."
+        ". content ."
+        ". illustration ."
+        ". . .";
+
+        &__content-card {
+            grid-area: content;
+            justify-self: center;
+
+                h3 {
+                    justify-self: center;
+                    text-align: center;
+                }
+                p {
+                    justify-self: center;
+                    text-align: center;
+                }
+                button {
+                    justify-self: center;
+                    text-align: center;
+                }
+        }
+        &__illustration-card {
+            grid-area: illustration;
+        }
+}

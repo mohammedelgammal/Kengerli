@@ -2,8 +2,8 @@
   position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   -ms-grid-rows: 300px 800px;
       grid-template-rows: 300px 800px;
 }

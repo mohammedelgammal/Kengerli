@@ -3,35 +3,36 @@
   display: grid;
   -ms-grid-columns: 50px 1fr 50px;
       grid-template-columns: 50px 1fr 50px;
-  -ms-grid-rows: 100px 500px;
-      grid-template-rows: 100px 500px;
-      grid-template-areas: ". numbers ." ". content .";
+  -ms-grid-rows: 50px auto 50px auto 100px;
+      grid-template-rows: 50px auto 50px auto 100px;
+      grid-template-areas: ". . ." ". numbers ." ". . ." ". content ." ". . .";
   z-index: 3;
   background-color: #0D0D2B;
 }
 
 .why-crappo__numbers {
-  -ms-grid-row: 1;
+  -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: numbers;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
   background-color: #0D0D2B;
 }
 
 .why-crappo__numbers__number {
   display: -ms-grid;
   display: grid;
+  -ms-grid-column-align: center;
+      justify-self: center;
   -ms-grid-columns: 80px auto;
       grid-template-columns: 80px auto;
   -ms-grid-rows: 60px 20px;
       grid-template-rows: 60px 20px;
       grid-template-areas: "icon num" "icon text";
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -104,7 +105,7 @@
 }
 
 .why-crappo__content {
-  -ms-grid-row: 2;
+  -ms-grid-row: 4;
   -ms-grid-column: 2;
   grid-area: content;
   display: -ms-grid;
@@ -159,6 +160,7 @@
   color: white;
   font-family: sans-serif;
   font-size: 2rem;
+  line-height: 180%;
 }
 
 .why-crappo__content__text p {

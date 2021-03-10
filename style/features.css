@@ -5,7 +5,6 @@
       grid-template-columns: 100%;
   -ms-grid-rows: 200px 1fr;
       grid-template-rows: 200px 1fr;
-  background-color: gray;
 }
 
 .features__heading {

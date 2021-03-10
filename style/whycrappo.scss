@@ -4,26 +4,31 @@
 .why-crappo {
     display: grid;
     grid-template-columns: 50px 1fr 50px;
-    grid-template-rows: 100px 500px;
+    grid-template-rows: 50px auto 50px auto 100px;
     grid-template-areas: 
+        ". . ."
         ". numbers ."
-        ". content .";
+        ". . ."
+        ". content ."
+        ". . .";
     z-index: 3;
     background-color: $primary-color;
 
         &__numbers {
             grid-area: numbers;
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
             background-color: $primary-color;
 
                 &__number {
                     display: grid;
+                    justify-self: center;
                     grid-template-columns: 80px auto;
                     grid-template-rows: 60px 20px;
                     grid-template-areas: 
                         "icon num"
                         "icon text";
-                    flex-direction: column;
                     flex: 1;
 
                         &__icon {
@@ -98,6 +103,7 @@
                             color: white;
                             font-family: sans-serif;
                             font-size: 2rem;
+                            line-height: 180%;
                         }
                         
                         p {

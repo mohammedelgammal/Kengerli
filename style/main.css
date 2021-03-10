@@ -4,9 +4,9 @@
   display: grid;
   -ms-grid-columns: 50px 1fr 1fr 50px;
       grid-template-columns: 50px 1fr 1fr 50px;
-  -ms-grid-rows: 100%;
-      grid-template-rows: 100%;
-      grid-template-areas: ". value illustration .";
+  -ms-grid-rows: 1fr 100px;
+      grid-template-rows: 1fr 100px;
+      grid-template-areas: ". value illustration ." ". . . .";
   background-color: #0D0D2B;
 }
 
@@ -107,7 +107,7 @@
 .main__value__heading h1 {
   color: white;
   font-family: sans-serif;
-  font-size: 3rem;
+  line-height: 150%;
 }
 
 .main__value__paragraph {
@@ -155,27 +155,24 @@
 }
 
 .main__value__try__button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  position: relative;
-  width: 150px;
-  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15px auto 10px auto 15px;
+      grid-template-columns: 15px auto 10px auto 15px;
+  -ms-grid-rows: 10px 30px 10px;
+      grid-template-rows: 10px 30px 10px;
+      grid-template-areas: ". . . . ." ". text . circle ." ". . . . .";
   border-radius: 100px;
   background-color: #3671E9;
   cursor: pointer;
 }
 
 .main__value__try__button__circle {
+  height: 30px;
+  width: 30px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: circle;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,17 +182,17 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
-  right: 10px;
-  width: 30px;
-  height: 30px;
   border-radius: 50%;
   background-color: white;
 }
 
 .main__value__try__button span {
-  position: absolute;
-  left: 20px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: text;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   font-size: calc(0.5vw + 0.5rem);
   font-weight: bold;
 }

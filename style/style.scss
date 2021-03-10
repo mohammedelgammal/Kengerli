@@ -20,7 +20,632 @@
 body {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 80px 600px 620px auto auto auto auto;
+    grid-template-rows: 80px auto auto auto auto auto auto;
     overflow-x: hidden;
+    background-color: $primary-color;
 }
 
+//tablets and below
+@media all and (max-width: 992px) {
+    .header {
+        grid-template-columns: 20px 1fr 1fr 20px;
+        grid-template-rows: 20px 40px 20px;
+        grid-template-areas: 
+            ". . . ."
+            ". logo nav ."
+            ". . . .";
+
+            &__logo {
+                grid-area: logo;
+                grid-template-columns: 20px; 
+                grid-template-rows: 1fr;
+            }
+            &__nav {
+                grid-area: nav;
+                grid-template-columns: 1fr 3fr;
+                grid-template-rows: 100%;
+                grid-template-areas: 
+                    ". signin .";
+
+                &__menu {
+                    display: none;
+                }
+                &__sign-in {
+                    grid-area: signin;
+                }
+            }
+    }
+    .main {
+        background-color: $primary-color;
+        grid-template-columns: 20px 1fr 20px;
+        grid-template-rows: 1fr 1fr 100px;
+        grid-template-areas: 
+            ". value ."
+            ". illustration ."
+            ". . .";
+            
+            &__value {
+                background-color: $primary-color;
+                grid-area: value;
+                justify-content: center;
+                grid-template-columns: 1fr;
+                grid-template-rows: 100px 30px 20px auto 20px 40px 20px 50px 20px;
+                grid-template-areas: 
+                    "."
+                    "info"
+                    "."
+                    "heading"
+                    "."
+                    "paragraph"
+                    "."
+                    "try"
+                    ".";
+
+                    &__info {
+                        grid-area: info;
+                        justify-self: center;
+                    }
+                    &__heading {
+                        grid-area: heading;
+                        justify-self: center;
+                        text-align: center;
+                        
+                            h1 {
+                                font-size: clamp(4vw, 4.5vw, 5vw);
+                            }
+                    }
+                    &__paragraph {
+                        grid-area: paragraph;
+                        justify-self: center;
+                        text-align: center;
+                    }
+                    &__try {
+                        grid-area: try;
+                        justify-self: center;
+                    }
+                
+            }
+            &__illustration {
+                grid-area: illustration;
+                justify-self: center;
+
+                    img {
+                        width: calc(604px * 0.6);
+                        height: calc(586px * 0.6);
+                    }
+            }
+    }
+    .why-crappo {
+        background-color: $primary-color;
+        grid-template-columns: 20px auto 20px;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+            ". numbers ."
+            ". content .";
+
+            &__numbers {
+                grid-area: numbers;
+                display: grid;
+                grid-column-gap: 10px;
+                grid-template-columns: auto auto auto;
+                grid-template-rows: auto;
+
+                &__number {
+                    background-color: $primary-color;
+                    grid-template-columns: 10px auto 10px;
+                    grid-template-rows: auto 10px auto 10px auto;
+                    grid-template-areas: 
+                        ". icon ."
+                        ". . ."
+                        ". num ."
+                        ". . ."
+                        ". text .";
+
+                        &__icon {
+                            grid-area: icon;
+                            width: 80px;
+                            height: 80px;
+                            justify-self: center;
+                        }
+                        &__num {
+                            grid-area: num;
+                            justify-self: center;
+                            grid-template-columns: 1fr;
+                            grid-template-rows: 100%;
+                            grid-template-areas: 
+                                "text";
+
+                                span {
+                                    grid-area: text;
+                                }
+                        }
+                        &__text {
+                            grid-area: text;
+                            justify-self: center;
+                            grid-template-columns: 1fr;
+                            grid-template-rows: 100%;
+                            grid-template-areas: 
+                                "text";
+
+                                span {
+                                    grid-area: text;
+                                }
+                        }
+                }
+            }
+
+            &__content {
+                grid-area: content;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 1fr 1fr;
+
+                    &__image {
+                        margin-bottom: 50px;
+                        img {
+                            width: calc(650px * 0.6);
+                            height: calc(473px * 0.6);
+                        }
+                    }
+
+                    &__text {
+                        justify-self: center;
+                        text-align: center;
+                        background-color: $primary-color;
+                        align-items: center;
+                        padding-left: 0px;
+                    }
+            }
+    }
+    .trade-securely {
+        background: $gray-gradient;
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px auto 800px 50px;
+        grid-template-areas: 
+            "earn"
+            "calc"
+            "crypto"
+            ".";
+
+        &__earnings {
+            grid-area: earn;
+            align-items: center;
+        }
+
+        &__revenue-calculator {
+            height: 300px;
+            width: 100vw;
+            position: relative;
+            background-color: white;
+            top: 0px;
+            grid-area: calc;
+        }
+
+        &__crypto-currencies {
+            grid-area: crypto;
+            background: $gray-gradient;
+            grid-template-columns: 20px 1fr 40px;
+            grid-template-rows: 1fr 1.5fr;
+            grid-template-areas: 
+                ". title ."
+                ". cards .";
+
+                &__title {
+                    @include centering;
+                    grid-area: title;
+                    background: $gray-gradient-top;
+                }
+                &__cards {
+                    grid-area: cards;
+                    grid-template-columns: 1fr 20px 1fr 20px 1fr;
+                    grid-template-rows: 50px 1fr 20px;
+                    grid-template-areas: 
+                        ". . . . ."
+                        "one . two . three"
+                        ". . . . .";
+
+                        &__card--one {
+                            grid-area: one;
+                        }
+                        &__card--two {
+                            grid-area: two;
+                        }
+                        &__card--three {
+                            grid-area: three;
+                        }
+                }
+        }
+    }
+    .features {
+        background-color: $secondary-color;
+        &__heading {
+            align-items: flex-end;
+        }
+
+        &__content {
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(3, auto);
+
+            &__invest-smart {
+                @include responsive-fs;
+            }
+            &__statistics {
+                @include responsive-fs;
+            }
+            &__grow-profit {
+                @include responsive-fs;
+            }
+        }
+           
+    }
+    .start-mining {
+        &__card {
+            
+            &__subscribe {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                grid-template-areas: 
+                    "input"
+                    "button";
+    
+                    input {
+                        grid-area: input;
+                    }
+                    button {
+                        grid-area: button;
+                    }
+            }
+        }
+        
+    }
+        
+}
+
+//mobiles
+@media all and (max-width: 688px) {
+    .header {
+        grid-template-columns: 20px 1fr 20px;
+        grid-template-rows: 20px 40px 20px;
+        grid-template-areas: 
+            ". . ."
+            ". logo ."
+            ". . .";
+
+            &__logo {
+                grid-area: logo;
+                justify-self: start;
+            }
+            &__nav {
+                grid-area: nav;
+                display: none;
+            }
+    }        
+    
+    .main {
+        background-color: $primary-color;
+        grid-template-columns: 20px 1fr 20px;
+        grid-template-rows: 1fr 1fr 100px;
+        grid-template-areas: 
+            ". value ."
+            ". illustration ."
+            ". . .";
+            
+            &__value {
+                background-color: $primary-color;
+                grid-area: value;
+                justify-content: center;
+                grid-template-columns: 1fr;
+                grid-template-rows: 50px 30px 20px auto 20px 40px 20px 50px 20px;
+                grid-template-areas: 
+                    "."
+                    "info"
+                    "."
+                    "heading"
+                    "."
+                    "paragraph"
+                    "."
+                    "try"
+                    ".";
+
+                    &__info {
+                        grid-area: info;
+                        justify-self: start;
+                    }
+                    &__heading {
+                        grid-area: heading;
+                        justify-self: start;
+                        text-align: left;
+                        
+                            h1 {
+                                font-size: 6vw;
+                            }
+                    }
+                    &__paragraph {
+                        grid-area: paragraph;
+                        justify-self: start;
+                        text-align: left;
+                    }
+                    &__try {
+                        grid-area: try;
+                        justify-self: start;
+                    }
+                
+            }
+            &__illustration {
+                grid-area: illustration;
+                justify-self: start;
+
+                    img {
+                        width: 250px;
+                        height: 250px;
+                    }
+            }
+    }
+    .why-crappo {
+        background-color: $primary-color;
+        grid-template-columns: 20px auto 20px;
+        grid-template-rows: auto 50px auto;
+        grid-template-areas: 
+            ". numbers ."
+            ". . ."
+            ". content .";
+
+            &__numbers {
+                grid-area: numbers;
+                display: grid;
+                grid-column-gap: 10px;
+                grid-template-columns: auto;
+                grid-template-rows: auto auto auto;
+                grid-row-gap: 40px;
+
+                &__number {
+                    justify-self: start;
+                    background-color: $primary-color;
+                    grid-template-columns: 80px 20px auto;
+                    grid-template-rows: 60px 20px;
+                    grid-template-areas: 
+                        "icon . num"
+                        "icon . text";
+
+                        &__icon {
+                            grid-area: icon;
+                            width: 80px;
+                            height: 80px;
+                            align-self: center;
+                        }
+                        &__num {
+                            grid-area: num;
+                            justify-self: start;
+                            grid-template-columns: 1fr;
+                            grid-template-rows: 100%;
+                            grid-template-areas: 
+                                "text";
+
+                                span {
+                                    grid-area: text;
+                                }
+                        }
+                        &__text {
+                            grid-area: text;
+                            justify-self: start;
+                            grid-template-columns: 1fr;
+                            grid-template-rows: 100%;
+                            grid-template-areas: 
+                                "text";
+
+                                span {
+                                    grid-area: text;
+                                }
+                        }
+                }
+            }
+
+            &__content {
+                grid-area: content;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 1fr 1fr;
+
+                    &__image {
+                        order: 2;
+                        margin-bottom: 50px;
+                        img {
+                            width: 250px;
+                            height: 250px;
+                        }
+                    }
+
+                    &__text {
+                        justify-self: start;
+                        text-align: left;
+                        background-color: $primary-color;
+                        align-items: flex-start;
+                        padding-left: 0px;
+                    }
+            }
+    }
+    .trade-securely {
+        background: $gray-gradient;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 50px;
+        grid-template-areas: 
+            "earn"
+            "crypto"
+            ".";
+
+        &__earnings {
+            grid-area: earn;
+            align-items: star;
+            justify-content: start;
+
+                &__card {
+                    align-items: flex-start;
+                    padding-left: 20px;
+
+                        h2, p {
+                            text-align: left;
+                        }
+                }
+        }
+
+        &__revenue-calculator {
+            display: none;
+        }
+
+        &__crypto-currencies {
+            grid-area: crypto;
+            background: $gray-gradient;
+            grid-row-gap: 100px;
+            grid-template-columns: 20px 1fr 20px;
+            grid-template-rows: auto auto;
+            grid-template-areas: 
+                ". title ."
+                ". cards .";
+
+                &__title {
+                    @include centering;
+                    margin-top: 100px;
+                    justify-self: start;
+                    justify-content: start;
+                    text-align: left;
+                    grid-area: title;
+                    background: $gray-gradient-top;
+
+                        h2 {
+                            text-align: left;
+                        }
+                }
+                &__cards {
+                    grid-area: cards;
+                    grid-row-gap: 20px;
+                    grid-template-columns: 20px 1fr 20px;
+                    grid-template-rows: 1fr 1fr 1fr 20px;
+                    grid-template-areas: 
+                        ". one ."
+                        ". two ."
+                        ". three ."
+                        ". . .";
+
+                        &__card--one {
+                            grid-area: one;
+                        }
+                        &__card--two {
+                            grid-area: two;
+                        }
+                        &__card--three {
+                            grid-area: three;
+                        }
+                }
+        }
+    }
+    .features {
+        background-color: $secondary-color;
+        &__heading {
+            align-items: flex-start;
+
+                h2 {
+                    text-align: left;
+                    padding: 50px 20px;
+                }
+        }
+
+        &__content {
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(3, auto);
+
+            &__invest-smart {
+                @include responsive-fs;
+                grid-template-columns: 10px 1fr 10px;
+
+                    &__content-card {
+                        justify-self: start;
+                    }
+                    &__illustration-card {
+                        img {
+                            width: 250px;
+                            height: 200px;
+                        }
+                    }
+            }
+            &__statistics {
+                @include responsive-fs;
+                grid-template-columns: 10px 1fr 10px;
+
+                    &__content-card {
+                        justify-self: start;
+                    }
+                    &__illustration-card {
+                        img {
+                            width: 250px;
+                            height: 200px;
+                        }
+                    }
+            }
+            &__grow-profit {
+                @include responsive-fs;
+                grid-template-columns: 10px 1fr 10px;
+
+                    &__content-card {
+                        justify-self: start;
+                    }
+                    &__illustration-card {
+                        img {
+                            width: 250px;
+                            height: 200px;
+                        }
+                    }
+            }
+        }
+           
+    }
+    .start-mining {
+        grid-template-columns: 20px 1fr 20px;
+        grid-template-rows: 50px 200px 50px;
+        grid-template-areas: 
+            ". . ."
+            ". card ."
+            ". . .";
+
+        &__card {
+            grid-area: card;
+            grid-template-columns: 20px 1fr 20px;
+            grid-template-rows: 20px 1fr 1fr 20px;
+            grid-template-areas: 
+                ". . ."
+                ". content ."
+                ". subscribe ."
+                ". . .";
+
+            &__content {
+                grid-area: content;
+            }    
+
+            &__subscribe {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                grid-area: subscribe;
+    
+                    input {
+                        margin-bottom: 10px;
+                        grid-area: input;
+                    }
+                    button {
+                        grid-area: button;
+                    }
+            }
+        }
+        
+    }
+    .footer {
+        &__navigation {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-row-gap: 20px;
+        }  
+
+        &__bottom-bar {
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 1fr;
+        }    
+    }
+}

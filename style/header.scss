@@ -27,6 +27,7 @@
             
                 &__menu {
                     background-color: $primary-color;
+                                        
                         ul {
                             @include centering();
                             width: 100%;
