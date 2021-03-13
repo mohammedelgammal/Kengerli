@@ -122,7 +122,6 @@
                 ". button ."
                 ". . .";
             grid-area: content; 
-            background-color: $secondary-color;   
 
                 h3 {
                     @include centering();
@@ -154,7 +153,6 @@
         &__illustration-card {
             @include centering();
             grid-area: illustration;  
-            background-color: $secondary-color;
             
                 img {
                     width: calc(580px * 0.8);

@@ -6,7 +6,6 @@
   -ms-grid-rows: 50px auto 50px auto 100px;
       grid-template-rows: 50px auto 50px auto 100px;
       grid-template-areas: ". . ." ". numbers ." ". . ." ". content ." ". . .";
-  z-index: 3;
   background-color: #0D0D2B;
 }
 
@@ -114,7 +113,7 @@
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 100%;
       grid-template-rows: 100%;
-  background-color: #0D0D2B;
+  background-color: transparent;
 }
 
 .why-crappo__content__image {

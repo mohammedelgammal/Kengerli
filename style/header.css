@@ -19,7 +19,6 @@
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
-  background-color: #0D0D2B;
 }
 
 .header__nav {
@@ -80,7 +79,6 @@
 }
 
 .header__nav__sign-in {
-  background-color: #0D0D2B;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -99,7 +97,7 @@
 }
 
 .header__nav__sign-in .login {
-  background-color: #0D0D2B;
+  background-color: transparent;
 }
 
 .header__nav__sign-in button:hover {

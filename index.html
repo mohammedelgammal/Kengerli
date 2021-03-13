@@ -7,11 +7,12 @@
     <title>Kengerli</title>
     <link rel="stylesheet" href="style/style.css">
   </head>
-  <body> 
-    <div class="header"> 
-      <div class="header__logo"> <img src="imgs/logo.png" alt="CRAPPO"></div>
+  <body>
+    <!-- BEGIN HEADER-->
+    <div class="header" id="header">
+      <div class="header__logo hidden"><img src="imgs/logo.png" alt="CRAPPO"></div>
       <div class="header__nav">
-        <div class="header__nav__menu">
+        <div class="header__nav__menu hidden">
           <ul>   
             <li>Products</li>
             <li>Features</li>
@@ -19,15 +20,17 @@
             <li>Contact</li>
           </ul>
         </div>
-        <div class="header__nav__sign-in">        
+        <div class="header__nav__sign-in hidden">        
           <button class="login">Login </button>
           <button class="register">Register</button>
         </div>
       </div>
     </div>
+    <!-- END HEADER-->
+    <!-- BEGIN MAIN-->
     <div class="main">
-      <div class="main__value"> 
-        <div class="main__value__info"> 
+      <div class="main__value hidden">
+        <div class="main__value__info">
           <div class="main__value__info__text"><span class="main__value__info__text__save">75% SAVE</span><span class="main__value__info__text__for">For the Black Friday weekend </span></div>
         </div>
         <div class="main__value__heading"> 
@@ -42,12 +45,14 @@
           </div>
         </div>
       </div>
-      <div class="main__illustration"> 
+      <div class="main__illustration hidden"> 
         <div class="main__illustration__image"> <img src="imgs/bitcoin.png" alt="bitcoin"></div>
       </div>
     </div>
+    <!-- END MAIN-->
+    <!-- BEGIN WHY-CRAPPO-->
     <div class="why-crappo"> 
-      <div class="why-crappo__numbers"> 
+      <div class="why-crappo__numbers hidden">
         <div class="why-crappo__numbers__number">
           <div class="why-crappo__numbers__number__icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30 31H3C2.46957 31 1.96086 30.7893 1.58579 30.4142C1.21071 30.0391 1 29.5304 1 29V2C1 1.73478 1.10536 1.48043 1.29289 1.29289C1.48043 1.10536 1.73478 1 2 1C2.26522 1 2.51957 1.10536 2.70711 1.29289C2.89464 1.48043 3 1.73478 3 2V29H30C30.2652 29 30.5196 29.1054 30.7071 29.2929C30.8946 29.4804 31 29.7348 31 30C31 30.2652 30.8946 30.5196 30.7071 30.7071C30.5196 30.8946 30.2652 31 30 31Z" fill="#3671E9"/><path d="M9.75 27H7.25C6.65326 27 6.08097 26.7629 5.65901 26.341C5.23705 25.919 5 25.3467 5 24.75V15.25C5 14.6533 5.23705 14.081 5.65901 13.659C6.08097 13.2371 6.65326 13 7.25 13H9.75C10.3467 13 10.919 13.2371 11.341 13.659C11.7629 14.081 12 14.6533 12 15.25V24.75C12 25.3467 11.7629 25.919 11.341 26.341C10.919 26.7629 10.3467 27 9.75 27Z" fill="#3671E9"/><path d="M18.75 27H16.25C15.6533 27 15.081 26.7629 14.659 26.341C14.2371 25.919 14 25.3467 14 24.75V12.25C14 11.6533 14.2371 11.081 14.659 10.659C15.081 10.2371 15.6533 10 16.25 10H18.75C19.3467 10 19.919 10.2371 20.341 10.659C20.7629 11.081 21 11.6533 21 12.25V24.75C21 25.3467 20.7629 25.919 20.341 26.341C19.919 26.7629 19.3467 27 18.75 27Z" fill="#3671E9"/><path d="M27.7274 27H25.2274C24.6307 27 24.0584 26.7629 23.6364 26.341C23.2145 25.919 22.9774 25.3467 22.9774 24.75V8.25C22.9774 7.65326 23.2145 7.08097 23.6364 6.65901C24.0584 6.23705 24.6307 6 25.2274 6H27.7274C28.3242 6 28.8965 6.23705 29.3184 6.65901C29.7404 7.08097 29.9774 7.65326 29.9774 8.25V24.75C29.9774 25.3467 29.7404 25.919 29.3184 26.341C28.8965 26.7629 28.3242 27 27.7274 27Z" fill="#3671E9"/></svg></div>
           <div class="why-crappo__numbers__number__num"> <span>$30B</span></div>
@@ -65,23 +70,25 @@
         </div>
       </div>
       <div class="why-crappo__content">
-        <div class="why-crappo__content__image"> <img src="imgs/why-illustration.png" alt="why CRAPPO?"></div>
-        <div class="why-crappo__content__text"> 
+        <div class="why-crappo__content__image hidden"><img src="imgs/why-illustration.png" alt="why CRAPPO?"></div>
+        <div class="why-crappo__content__text hidden">
           <h2>Why you should choose<br>CRAPPO</h2>
           <p>Experience the next generation cryptocurrency<br>platform. No financial borders, extra fees, and fake<br>reviews.</p>
           <div class="button">Learn More</div>
         </div>
       </div>
     </div>
+    <!-- END WHY-CRAPPO-->
+    <!-- BEGIN TRADE-SECURELY-->
     <div class="trade-securely">
       <div class="trade-securely__earnings">
-        <div class="trade-securely__earnings__card">
+        <div class="trade-securely__earnings__card hidden">
           <h2>Check how much you can earn</h2>
           <p>Let’s check your hash rate to see how much you will earn today,<br>Exercitation veniam consequat sunt nostrud amet.</p>
         </div>
       </div>
       <div class="trade-securely__revenue-calculator">
-        <div class="trade-securely__revenue-calculator__card"> 
+        <div class="trade-securely__revenue-calculator__card hidden">
           <div class="trade-securely__revenue-calculator__card__input"> 
             <input type="text" placeholder="Enter your hash rate">
             <select>
@@ -97,10 +104,10 @@
         </div>
       </div>
       <div class="trade-securely__crypto-currencies">
-        <div class="trade-securely__crypto-currencies__title">  
+        <div class="trade-securely__crypto-currencies__title hidden">
           <h2>Trade securely and market the high<br>growth cryptocurrencies.</h2>
         </div>
-        <div class="trade-securely__crypto-currencies__cards"> 
+        <div class="trade-securely__crypto-currencies__cards hidden">
           <div class="trade-securely__crypto-currencies__cards__card--one">
             <div class="trade-securely__crypto-currencies__cards__card--one__logo"> <img src="imgs/logos_bitcoin.png" alt="bitcoin"></div>
             <div class="trade-securely__crypto-currencies__cards__card--one__name"> <span class="trade-securely__crypto-currencies__cards__card--one__name--primary">Bitcoin </span><span class="trade-securely__crypto-currencies__cards__card--one__name--secondary">BTC </span></div>
@@ -128,50 +135,56 @@
         </div>
       </div>
     </div>
+    <!-- END TRADE-SECURELY-->
+    <!-- BEGIN FEATURES-->
     <div class="features"> 
-      <div class="features__heading"> 
+      <div class="features__heading hidden"> 
         <h2>Market sentiments, portfolio, and run<br>the infrastructure of your choice</h2>
       </div>
       <div class="features__content"> 
-        <div class="features__content__invest-smart"> 
-          <div class="features__content__invest-smart__content-card"> 
+        <div class="features__content__invest-smart">
+          <div class="features__content__invest-smart__content-card hidden"> 
             <h3>Invest Smart</h3>
             <p>Get full statistic information about the behaviour of<br>buyers and sellers will help you to make the decision. </p>
             <button>Learn More </button>
           </div>
-          <div class="features__content__invest-smart__illustration-card"> <img src="imgs/invest-card.png" alt="invest"></div>
+          <div class="features__content__invest-smart__illustration-card hidden"> <img src="imgs/invest-card.png" alt="invest"></div>
         </div>
         <div class="features__content__statistics"> 
-          <div class="features__content__statistics__illustration-card"> <img src="imgs/statistics-card.png" alt="detailed statistics"></div>
-          <div class="features__content__statistics__content-card"> 
+          <div class="features__content__statistics__illustration-card hidden"> <img src="imgs/statistics-card.png" alt="detailed statistics"></div>
+          <div class="features__content__statistics__content-card hidden"> 
             <h3>Detailed Statistics</h3>
             <p>View all mining related information in realtime, at any<br>point at any location and decide which polls you want<br>to mine in. </p>
             <button>Learn More  </button>
           </div>
         </div>
         <div class="features__content__grow-profit"> 
-          <div class="features__content__grow-profit__content-card"> 
+          <div class="features__content__grow-profit__content-card hidden">
             <h3>Grow your profit and track your investments</h3>
             <p>Use advanced analytical tools. Clear TradingView<br>charts let you track current and historical profit<br>investments. </p>
             <button>Learn More</button>
           </div>
-          <div class="features__content__grow-profit__illustration-card"> <img src="imgs/grow.png" alt="grow profits"></div>
+          <div class="features__content__grow-profit__illustration-card hidden"><img src="imgs/grow.png" alt="grow profits"></div>
         </div>
       </div>
     </div>
+    <!-- END FEATURES-->
+    <!-- BEGIN START-MINING-->
     <div class="start-mining"> 
-      <div class="start-mining__card"> <img src="imgs/B-logo.png" alt="">
-        <div class="start-mining__card__content"> 
+      <div class="start-mining__card hidden"><img src="imgs/B-logo.png" alt="">
+        <div class="start-mining__card__content hidden">
           <h3>Start mining now</h3>
           <p>Join now with CRAPPO to get the latest news<br>and start mining now</p>
         </div>
-        <div class="start-mining__card__subscribe"> 
+        <div class="start-mining__card__subscribe hidden">
           <input type="text" placeholder="Enter your email">
           <button>Subscribe </button>
         </div>
       </div>
     </div>
-    <div class="footer">
+    <!-- END START-MINING-->
+    <!-- BEGIN FOOTER-->
+    <div class="footer hidden">
       <div class="footer__navigation">
         <div class="footer__navigation__logo"> <img src="imgs/Logo.png" alt="Logo"></div>
         <div class="footer__navigation__quick-links"> 
@@ -216,6 +229,7 @@
         </div>
       </div>
     </div>
+    <!-- END FOOTER -->
   </body>
   <script src="scripts/anime.min.js"> </script>
   <script src="scripts/main.js"> </script>

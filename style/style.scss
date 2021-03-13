@@ -8,13 +8,17 @@
 @import 'features';
 @import 'startmining';
 @import 'footer';
-
+//styling 
 * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box; 
     color: $font-color;
     font-family: 'Rubik', sans-serif;
+}
+
+.hidden {
+    opacity: 0;
 }
 
 body {

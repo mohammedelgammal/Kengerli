@@ -133,7 +133,6 @@
         &__illustration {
             grid-area: illustration;
             @include centering();
-            background-color: $primary-color;
 
                 img {
                     width: calc(604px * 0.8);

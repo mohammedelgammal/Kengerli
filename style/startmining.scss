@@ -37,7 +37,6 @@
                     grid-template-columns: 1fr;
                     grid-template-rows: 1fr 1fr;
                     grid-area: content;
-                    background: $accent-color;
                     
                         h3 {
                             color: white;
@@ -59,10 +58,9 @@
                     grid-template-rows: 1fr;
                     grid-template-areas: 
                         "input . button";
-                    background-color: $accent-color;
 
                         input {
-                            background-color: $accent-color;
+                            background-color: transparent;
                             align-self: center; 
                             border: none;
                             outline: none;

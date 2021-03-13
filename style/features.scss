@@ -5,11 +5,11 @@
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 200px 1fr;
+    background-color: $secondary-color;
 
         &__heading {
             @include centering();
-            background-color: $secondary-color;
-                
+            
                 h2 {
                     color: white;
                     font-family: sans-serif;

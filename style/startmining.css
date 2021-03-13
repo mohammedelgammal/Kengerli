@@ -44,7 +44,6 @@
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: content;
-  background: #3671E9;
 }
 
 .start-mining__card__content h3 {
@@ -71,11 +70,10 @@
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
       grid-template-areas: "input . button";
-  background-color: #3671E9;
 }
 
 .start-mining__card__subscribe input {
-  background-color: #3671E9;
+  background-color: transparent;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;

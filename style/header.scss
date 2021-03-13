@@ -10,13 +10,13 @@
         ". . . ."
         ". logo nav ."
         ". . . .";
+
         
         &__logo {
             grid-area: logo;
             display: grid;
             grid-template-columns: 1fr 1fr; 
             grid-template-rows: 1fr;
-            background-color: $primary-color;
         }
         &__nav {
             grid-area: nav;
@@ -50,7 +50,6 @@
                         }
                 }
                 &__sign-in {
-                    background-color: $primary-color;
                     display: grid;
                     grid-template-columns: 1fr 1fr;
                     grid-template-rows: 100%;
@@ -64,7 +63,7 @@
                             cursor: pointer;
                         }
                         .login {
-                            background-color: $primary-color;
+                            background-color: transparent;
                         }
                         button:hover {
                             color: white;

@@ -18,7 +18,6 @@
   display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;
-  background-color: #0D0D2B;
 }
 
 .header__nav {
@@ -79,7 +78,6 @@
 }
 
 .header__nav__sign-in {
-  background-color: #0D0D2B;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -98,7 +96,7 @@
 }
 
 .header__nav__sign-in .login {
-  background-color: #0D0D2B;
+  background-color: transparent;
 }
 
 .header__nav__sign-in button:hover {
@@ -328,7 +326,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #0D0D2B;
 }
 
 .main__illustration img {
@@ -344,7 +341,6 @@
   -ms-grid-rows: 50px auto 50px auto 100px;
       grid-template-rows: 50px auto 50px auto 100px;
       grid-template-areas: ". . ." ". numbers ." ". . ." ". content ." ". . .";
-  z-index: 3;
   background-color: #0D0D2B;
 }
 
@@ -450,7 +446,7 @@
   display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 100%;
-  background-color: #0D0D2B;
+  background-color: transparent;
 }
 
 .why-crappo__content__image {
@@ -1319,6 +1315,7 @@
       grid-template-columns: 100%;
   -ms-grid-rows: 200px 1fr;
       grid-template-rows: 200px 1fr;
+  background-color: #2B076E;
 }
 
 .features__heading {
@@ -1331,7 +1328,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #2B076E;
 }
 
 .features__heading h2 {
@@ -1371,7 +1367,6 @@
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: content;
-  background-color: #2B076E;
 }
 
 .features__content__invest-smart__content-card h3 {
@@ -1450,7 +1445,6 @@
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: illustration;
-  background-color: #2B076E;
 }
 
 .features__content__invest-smart__illustration-card img {
@@ -1478,7 +1472,6 @@
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: content;
-  background-color: #2B076E;
 }
 
 .features__content__statistics__content-card h3 {
@@ -1557,7 +1550,6 @@
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: illustration;
-  background-color: #2B076E;
 }
 
 .features__content__statistics__illustration-card img {
@@ -1584,7 +1576,6 @@
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: content;
-  background-color: #2B076E;
 }
 
 .features__content__grow-profit__content-card h3 {
@@ -1663,7 +1654,6 @@
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: illustration;
-  background-color: #2B076E;
 }
 
 .features__content__grow-profit__illustration-card img {
@@ -1716,7 +1706,6 @@
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: content;
-  background: #3671E9;
 }
 
 .start-mining__card__content h3 {
@@ -1743,11 +1732,10 @@
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
       grid-template-areas: "input . button";
-  background-color: #3671E9;
 }
 
 .start-mining__card__subscribe input {
-  background-color: #3671E9;
+  background-color: transparent;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -2056,6 +2044,10 @@
           box-sizing: border-box;
   color: #C8C8C8;
   font-family: 'Rubik', sans-serif;
+}
+
+.hidden {
+  opacity: 0;
 }
 
 body {
