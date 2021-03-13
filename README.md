@@ -30,9 +30,9 @@ I'm using seven CSS files in this theme one for each section written in BEM Meth
 
 If you would like to edit a specific section of the site, simply find the appropriate file name of the CSS file, and then scroll down until you find the appropriate style that needs to be edited.
 
-	`code`        .header__logo img {
-	`code`	        change styles here:
-	`code`        }
+	.header__logo img {
+		change styles here:
+	}
 ## JavaScript
 This theme imports two Javascript files. Main.js includes all the custom scripting and anime.min.js is the Libraray I am using here
 
